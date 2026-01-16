@@ -7,8 +7,8 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { toast } from 'sonner'
-import { Upload, Trash2, ChevronUp, ChevronDown, Image as ImageIcon, Plus, X } from 'lucide-react'
-import { getCampaignImages, createCampaignImage, deleteCampaignImage, updateCampaignImage, uploadImage, deleteImage, type CampaignImage } from '@/lib/supabase'
+import { Upload, Trash2, ChevronUp, ChevronDown, Image as ImageIcon, Plus, X, Pencil } from 'lucide-react'
+import { getCampaignImages, createCampaignImage, deleteCampaignImage, updateCampaignImage, editCampaignImage, uploadImage, deleteImage, type CampaignImage } from '@/lib/supabase'
 import Image from 'next/image'
 
 export default function CampaignsPage() {
@@ -16,6 +16,8 @@ export default function CampaignsPage() {
   const [loading, setLoading] = useState(true)
   const [showForm, setShowForm] = useState(false)
   const [uploading, setUploading] = useState(false)
+  const [editingId, setEditingId] = useState<string | null>(null)
+  const [imagePreview, setImagePreview] = useState<string | null>(null)
 
   // Form state
   const [formData, setFormData] = useState({
@@ -51,18 +53,25 @@ export default function CampaignsPage() {
       imageFile: null
     })
     setShowForm(false)
+    setEditingId(null)
+    setImagePreview(null)
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (campaigns.length >= 10) {
+    if (!editingId && campaigns.length >= 10) {
       toast.error('Maksimum 10 kampanya ekleyebilirsiniz')
       return
     }
 
-    if (!formData.title || !formData.price || !formData.imageFile) {
-      toast.error('Başlık, fiyat ve görsel zorunludur')
+    if (!formData.title || !formData.price) {
+      toast.error('Başlık ve fiyat zorunludur')
+      return
+    }
+
+    if (!editingId && !formData.imageFile) {
+      toast.error('Görsel zorunludur')
       return
     }
 
@@ -81,43 +90,56 @@ export default function CampaignsPage() {
 
     setUploading(true)
     try {
-      // Upload image
-      console.log('Uploading image...')
-      const imageUrl = await uploadImage(formData.imageFile, 'campaigns')
-      console.log('Image uploaded:', imageUrl)
+      let imageUrl = imagePreview || ''
 
-      // Get next display order
-      const nextOrder = campaigns.length > 0 ? Math.max(...campaigns.map(c => c.display_order)) + 1 : 0
-      console.log('Next order:', nextOrder)
+      // Yeni resim yüklendiyse
+      if (formData.imageFile) {
+        console.log('Uploading new image...')
+        imageUrl = await uploadImage(formData.imageFile, 'campaigns')
+        console.log('Image uploaded:', imageUrl)
 
-      // Create campaign
-      console.log('Creating campaign with:', {
-        title: formData.title,
-        description: formData.description || null,
-        imageUrl,
-        price,
-        originalPrice,
-        nextOrder
-      })
+        // Eski resmi sil (düzenleme modundaysa ve eski resim varsa)
+        if (editingId && imagePreview && imagePreview !== imageUrl) {
+          try {
+            await deleteImage(imagePreview)
+          } catch (err) {
+            console.log('Eski resim silinirken hata:', err)
+          }
+        }
+      }
 
-      const result = await createCampaignImage(
-        formData.title,
-        formData.description || null,
-        imageUrl,
-        price,
-        originalPrice,
-        nextOrder
-      )
-      console.log('Campaign created:', result)
+      if (editingId) {
+        // Düzenleme modu
+        await editCampaignImage(
+          editingId,
+          formData.title,
+          formData.description || null,
+          imageUrl,
+          price,
+          originalPrice
+        )
+        toast.success('Kampanya güncellendi')
+      } else {
+        // Yeni ekleme modu
+        const nextOrder = campaigns.length > 0 ? Math.max(...campaigns.map(c => c.display_order)) + 1 : 0
 
-      toast.success('Kampanya başarıyla eklendi')
+        await createCampaignImage(
+          formData.title,
+          formData.description || null,
+          imageUrl,
+          price,
+          originalPrice,
+          nextOrder
+        )
+        toast.success('Kampanya başarıyla eklendi')
+      }
+
       resetForm()
       await loadCampaigns()
     } catch (error) {
-      console.error('Failed to create campaign:', error)
-      // Show more detailed error message
+      console.error('Failed to save campaign:', error)
       const errorMessage = error instanceof Error ? error.message : 'Bilinmeyen hata'
-      toast.error(`Kampanya eklenirken hata oluştu: ${errorMessage}`)
+      toast.error(`Kampanya kaydedilirken hata oluştu: ${errorMessage}`)
     } finally {
       setUploading(false)
     }
@@ -135,6 +157,24 @@ export default function CampaignsPage() {
       console.error('Delete failed:', error)
       toast.error('Kampanya silinirken hata oluştu')
     }
+  }
+
+  const handleEdit = (campaign: CampaignImage) => {
+    setFormData({
+      title: campaign.title,
+      description: campaign.description || '',
+      price: campaign.price.toString(),
+      originalPrice: campaign.original_price?.toString() || '',
+      imageFile: null
+    })
+    setImagePreview(campaign.image_url)
+    setEditingId(campaign.id)
+    setShowForm(true)
+
+    // Sayfayı yukarı kaydır
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 100)
   }
 
   const handleMoveUp = async (index: number) => {
@@ -194,7 +234,7 @@ export default function CampaignsPage() {
             </div>
             <Button
               onClick={() => setShowForm(!showForm)}
-              disabled={campaigns.length >= 10}
+              disabled={campaigns.length >= 10 && !showForm}
               size="lg"
             >
               {showForm ? (
@@ -216,7 +256,7 @@ export default function CampaignsPage() {
         {showForm && (
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>Yeni Kampanya Ekle</CardTitle>
+              <CardTitle>{editingId ? 'Kampanya Düzenle' : 'Yeni Kampanya Ekle'}</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -288,13 +328,19 @@ export default function CampaignsPage() {
                   {/* Right Column - Image Upload */}
                   <div className="space-y-4">
                     <div>
-                      <Label htmlFor="image">Kampanya Görseli (9:16) *</Label>
+                      <Label htmlFor="image">Kampanya Görseli (9:16) {!editingId && '*'}</Label>
                       <Input
                         id="image"
                         type="file"
                         accept="image/*"
-                        onChange={(e) => setFormData({ ...formData, imageFile: e.target.files?.[0] || null })}
-                        required
+                        onChange={(e) => {
+                          const file = e.target.files?.[0] || null
+                          setFormData({ ...formData, imageFile: file })
+                          if (file) {
+                            setImagePreview(URL.createObjectURL(file))
+                          }
+                        }}
+                        required={!editingId}
                       />
                       <p className="text-xs text-muted-foreground mt-1">
                         💡 En iyi görünüm için 1080x1920 boyutunda görsel kullanın (Max 5MB)
@@ -302,10 +348,10 @@ export default function CampaignsPage() {
                     </div>
 
                     {/* Image Preview */}
-                    {formData.imageFile && (
+                    {imagePreview && (
                       <div className="relative aspect-[9/16] bg-muted rounded-lg overflow-hidden">
                         <Image
-                          src={URL.createObjectURL(formData.imageFile)}
+                          src={imagePreview}
                           alt="Preview"
                           fill
                           className="object-cover"
@@ -328,12 +374,12 @@ export default function CampaignsPage() {
                     {uploading ? (
                       <>
                         <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2" />
-                        Ekleniyor...
+                        {editingId ? 'Güncelleniyor...' : 'Ekleniyor...'}
                       </>
                     ) : (
                       <>
                         <Upload className="w-4 h-4 mr-2" />
-                        Kampanya Ekle
+                        {editingId ? 'Kampanyayı Güncelle' : 'Kampanya Ekle'}
                       </>
                     )}
                   </Button>
@@ -429,16 +475,25 @@ export default function CampaignsPage() {
                       </div>
                     </div>
 
-                    {/* Delete Button */}
-                    <Button
-                      variant="destructive"
-                      size="sm"
-                      onClick={() => handleDelete(campaign)}
-                      className="w-full"
-                    >
-                      <Trash2 className="w-4 h-4 mr-2" />
-                      Sil
-                    </Button>
+                    {/* Action Buttons */}
+                    <div className="flex gap-2">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => handleEdit(campaign)}
+                        className="flex-1"
+                      >
+                        <Pencil className="w-4 h-4 mr-2" />
+                        Düzenle
+                      </Button>
+                      <Button
+                        variant="destructive"
+                        size="sm"
+                        onClick={() => handleDelete(campaign)}
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

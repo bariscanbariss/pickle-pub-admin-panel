@@ -295,7 +295,7 @@ export default function ProductsPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Eski Fiyat (TL)</label>
+                  <label className="text-sm font-medium">Karşılaştırma Fiyatı (TL)</label>
                   <input
                     type="number"
                     step="0.01"

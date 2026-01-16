@@ -408,6 +408,37 @@ export const updateCampaignImage = async (id: string, displayOrder: number) => {
   return data as CampaignImage
 }
 
+export const editCampaignImage = async (
+  id: string,
+  title: string,
+  description: string | null,
+  imageUrl: string,
+  price: number,
+  originalPrice: number | null
+) => {
+  // Calculate discount percentage if original price exists
+  const discountPercentage = originalPrice && originalPrice > price
+    ? Math.round(((originalPrice - price) / originalPrice) * 100)
+    : 0
+
+  const { data, error } = await supabase
+    .from('campaigns_images')
+    .update({
+      title,
+      description,
+      image_url: imageUrl,
+      price,
+      original_price: originalPrice,
+      discount_percentage: discountPercentage
+    })
+    .eq('id', id)
+    .select()
+    .single()
+
+  if (error) throw error
+  return data as CampaignImage
+}
+
 export const deleteCampaignImage = async (id: string) => {
   const { error } = await supabase
     .from('campaigns_images')
