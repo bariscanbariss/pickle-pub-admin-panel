@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Picklepub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+    <nav>
+        <div class="nav-header">
+            <div class="nav-social-icons">
+                <a href="https://www.instagram.com/picklepub.cy/" target="_blank">
+                    <img src="insta.svg" alt="Instagram" class="nav-icon">
+                </a>
+                <a href="https://www.google.com/maps/dir//K%C4%B1%C5%9Fla+Yolu+Sk+8,+Gazima%C4%9Fusa+99450/@35.1253331,33.8583482,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x14dfc90005dd81c9:0x2ca1d3d80a59612f!2m2!1d33.9407493!2d35.125361?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="location-dot-solid.svg" alt="Location" class="nav-icon">
+                </a>
+            </div>
+            
+            <img class="logo" src="picklepub.png" alt="">
+            <!-- LOGO -->
+        </div>
+        
+        <div class="nav-categories">
+             <button class="category-btn active" data-category="all">All</button>
+             <button class="category-btn" data-category="coffee">Coffee</button>
+             <button class="category-btn" data-category="beers">Beers</button>
+             <button class="category-btn" data-category="shots">Shots</button>
+             <button class="category-btn" data-category="whiskeys">Whiskeys</button>
+             <button class="category-btn" data-category="cocktails">Cocktails</button>
+             <button class="category-btn" data-category="foods">Foods</button>
+             <button class="category-btn" data-category="sides">Sides</button>
+             <button class="category-btn" data-category="softdrinks">Soft Drinks</button>
+            
+         </div>
+     </nav>
+   </header>
+    <section class="mb-16">
+            <h1 class="Kampanya">Populars</h1>
+            
+            <div class="slider-container">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <div class="slider-slide">
+                        <img src="pizzapopular.png" alt="Pizza" class="slider-image">
+                        <div class="slider-content">
+                            <h2 class="text-2xl font-bold mb-2">Pizza and 75CL Gatonegro Wine</h2>
+                            <p class="text-sm md:text-base opacity-90">1100TL</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="happyhour.png" alt="Happyhour" class="slider-image">
+                        <div class="slider-content">
+                            <h2 class="text-2xl font-bold mb-2"></h2>
+                            <p class="text-sm md:text-base opacity-90"></p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="buddog.png" alt="Hotdog" class="slider-image">
+                        <div class="slider-content">
+                            <h2 class="text-2xl font-bold mb-2"></h2>
+                            <p class="text-sm md:text-base opacity-90"></p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="barbie.png" alt="Barbie" class="slider-image">
+                        <div class="slider-content">
+                            <h2 class="text-2xl font-bold mb-2">Barbie Cocktail</h2>
+                            <p class="text-sm md:text-base opacity-90">300TL</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="aperol2.png" alt="Aperol Spritz" class="slider-image">
+                        <div class="slider-content">
+                            <h2 class="text-2xl font-bold mb-2">Aperol Spritz</h2>
+                            <p class="text-sm md:text-base opacity-90">300TL</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="midye.png" alt="Midye Tabağı" class="slider-image">
+                        <div class="slider-content">
+                            <h2 class="text-2xl font-bold mb-2">Midye Tabağı</h2>
+                            <p class="text-sm md:text-base opacity-90">250TL</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gradient-edge left"></div>
+                <div class="gradient-edge right"></div>
+                
+                <div class="slider-arrow prev" id="prevBtn">
+                    <i class="ri-arrow-left-s-line ri-lg"></i>
+                </div>
+                <div class="slider-arrow next" id="nextBtn">
+                    <i class="ri-arrow-right-s-line ri-lg"></i>
+                </div>
+                
+                <div class="slider-nav" id="sliderNav"></div>
+            </div>
+        </section>
+        
+
+  
+    
+   
+    <main>
+        <div class="menu-container" id="menuContainer">
+            <!-- Menu items will be dynamically added here -->
+             
+        </div>
+    </main>
+
+        
+ <div class="aboutUS">
+                   <h2>Hakkımızda</h2>
+            <p>Pickle Pub, lezzetin, eğlencenin ve samimiyetin buluştuğu bir mekan olarak sizlere kapılarını açıyor! Bizler, tutkuyla hazırlanan nefis pickle'lar ve birbirinden özel pub lezzetleriyle, damaklarınızı şenlendirmek için buradayız.
+    
+                Pickle Pub, sadece bir mekan değil, aynı zamanda bir buluşma noktasıdır. Arkadaşlarınızla bir araya gelip sohbet edebileceğiniz, yeni insanlarla tanışıp keyifli vakit geçirebileceğiniz bir yer. Sizleri ağırlamaktan ve sizlere en iyi hizmeti sunmaktan büyük mutluluk duyacağız.
+                Gelin, Pickle Pub'un sıcak atmosferine dahil olun ve lezzet dolu bir yolculuğa birlikte çıkalım!
+                </p>
+        </div>
+  
+    
+       
+<footer class="footer">
+    <a href="https://www.instagram.com/picklepub.cy/" target="_blank">
+        <img src="insta.svg" alt="Instagram" class="icon">
+    </a>
+    <a href="https://www.google.com/maps/dir//K%C4%B1%C5%9Fla+Yolu+Sk+8,+Gazima%C4%9Fusa+99450/@35.1253331,33.8583482,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x14dfc90005dd81c9:0x2ca1d3d80a59612f!2m2!1d33.9407493!2d35.125361?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        <img src="location-dot-solid.svg" alt="Location" class="icon">
+    </a>
+</footer>  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode.js"></script>
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+</body>
+</html>  
