@@ -53,6 +53,13 @@ export type Activity = {
   updated_at: string
 }
 
+export type AboutImage = {
+  id: string
+  image_url: string
+  display_order: number
+  created_at: string
+}
+
 // Helper functions for CRUD operations
 
 // Categories
@@ -288,6 +295,49 @@ export const deleteImage = async (imageUrl: string) => {
   const { error } = await supabase.storage
     .from('product-images')
     .remove([filePath])
+
+  if (error) throw error
+}
+
+// About Images
+export const getAboutImages = async () => {
+  const { data, error } = await supabase
+    .from('about_images')
+    .select('*')
+    .order('display_order', { ascending: true })
+
+  if (error) throw error
+  return data as AboutImage[]
+}
+
+export const createAboutImage = async (imageUrl: string, displayOrder: number) => {
+  const { data, error } = await supabase
+    .from('about_images')
+    .insert({ image_url: imageUrl, display_order: displayOrder })
+    .select()
+    .single()
+
+  if (error) throw error
+  return data as AboutImage
+}
+
+export const updateAboutImage = async (id: string, displayOrder: number) => {
+  const { data, error } = await supabase
+    .from('about_images')
+    .update({ display_order: displayOrder })
+    .eq('id', id)
+    .select()
+    .single()
+
+  if (error) throw error
+  return data as AboutImage
+}
+
+export const deleteAboutImage = async (id: string) => {
+  const { error } = await supabase
+    .from('about_images')
+    .delete()
+    .eq('id', id)
 
   if (error) throw error
 }

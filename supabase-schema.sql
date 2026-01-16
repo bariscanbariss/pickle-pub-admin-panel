@@ -56,12 +56,21 @@ CREATE TABLE admin_users (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
+-- Hakkımızda sayfası resimleri için tablo
+CREATE TABLE about_images (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  image_url TEXT NOT NULL,
+  display_order INTEGER NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Row Level Security (RLS) politikaları
 ALTER TABLE categories ENABLE ROW LEVEL SECURITY;
 ALTER TABLE products ENABLE ROW LEVEL SECURITY;
 ALTER TABLE popular_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE activities ENABLE ROW LEVEL SECURITY;
 ALTER TABLE admin_users ENABLE ROW LEVEL SECURITY;
+ALTER TABLE about_images ENABLE ROW LEVEL SECURITY;
 
 -- Herkes okuyabilir (public access) - eğer varsa önce sil, sonra oluştur
 DROP POLICY IF EXISTS "Public read access for categories" ON categories;
@@ -75,6 +84,9 @@ CREATE POLICY "Public read access for popular_items" ON popular_items FOR SELECT
 
 DROP POLICY IF EXISTS "Public read access for activities" ON activities;
 CREATE POLICY "Public read access for activities" ON activities FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Public read access for about_images" ON about_images;
+CREATE POLICY "Public read access for about_images" ON about_images FOR SELECT USING (true);
 
 -- Storage bucket oluştur (resimleri için) - eğer yoksa
 INSERT INTO storage.buckets (id, name, public)

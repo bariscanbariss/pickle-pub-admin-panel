@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -12,13 +13,23 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="text-2xl font-bold text-primary">Pickle Pub</div>
+            <Image
+              src="/picklepublogo.png"
+              alt="Pickle Pub"
+              width={150}
+              height={50}
+              className="h-12 w-auto"
+              priority
+            />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
+            <a href="#menu" className="text-sm font-medium hover:text-primary transition-colors">
+              Menü
+            </a>
             <a href="#populars" className="text-sm font-medium hover:text-primary transition-colors">
-              Populars
+              Kampanyalar
             </a>
             <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
               Hakkımızda
@@ -38,11 +49,18 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden pt-4 pb-2 flex flex-col gap-4">
             <a
+              href="#menu"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Menü
+            </a>
+            <a
               href="#populars"
               className="text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Populars
+              Kampanyalar
             </a>
             <a
               href="#about"

@@ -2,16 +2,18 @@
 
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { LayoutDashboard, Package, Tags, Star, Calendar, LogOut } from 'lucide-react'
+import { LayoutDashboard, Package, Tags, Star, Calendar, ImageIcon, LogOut } from 'lucide-react'
 import { useState } from 'react'
 
 const navigation = [
   { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
   { name: 'Kategoriler', href: '/admin/dashboard/categories', icon: Tags },
   { name: 'Menü Ürünleri', href: '/admin/dashboard/products', icon: Package },
-  { name: 'Popüler Ürünler', href: '/admin/dashboard/popular', icon: Star },
+  { name: 'Kampanyalar', href: '/admin/dashboard/popular', icon: Star },
   { name: 'Aktiviteler', href: '/admin/dashboard/activities', icon: Calendar },
+  { name: 'Hakkımızda Görselleri', href: '/admin/dashboard/about-images', icon: ImageIcon },
 ]
 
 export default function AdminLayout({
@@ -36,9 +38,13 @@ export default function AdminLayout({
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="p-6 border-b border-border">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Pickle Pub
-            </h1>
+            <Image
+              src="/picklepublogo.png"
+              alt="Pickle Pub"
+              width={120}
+              height={40}
+              className="h-10 w-auto mb-2"
+            />
             <p className="text-sm text-muted-foreground mt-1">Admin Panel</p>
           </div>
 
