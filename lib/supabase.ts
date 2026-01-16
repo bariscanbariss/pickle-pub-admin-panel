@@ -60,6 +60,18 @@ export type AboutImage = {
   created_at: string
 }
 
+export type CampaignImage = {
+  id: string
+  title: string
+  description: string | null
+  image_url: string
+  price: number
+  original_price: number | null
+  discount_percentage: number
+  display_order: number
+  created_at: string
+}
+
 // Helper functions for CRUD operations
 
 // Categories
@@ -336,6 +348,69 @@ export const updateAboutImage = async (id: string, displayOrder: number) => {
 export const deleteAboutImage = async (id: string) => {
   const { error } = await supabase
     .from('about_images')
+    .delete()
+    .eq('id', id)
+
+  if (error) throw error
+}
+
+// Campaign Images
+export const getCampaignImages = async () => {
+  const { data, error } = await supabase
+    .from('campaigns_images')
+    .select('*')
+    .order('display_order', { ascending: true })
+
+  if (error) throw error
+  return data as CampaignImage[]
+}
+
+export const createCampaignImage = async (
+  title: string,
+  description: string | null,
+  imageUrl: string,
+  price: number,
+  originalPrice: number | null,
+  displayOrder: number
+) => {
+  // Calculate discount percentage if original price exists
+  const discountPercentage = originalPrice && originalPrice > price
+    ? Math.round(((originalPrice - price) / originalPrice) * 100)
+    : 0
+
+  const { data, error } = await supabase
+    .from('campaigns_images')
+    .insert({
+      title,
+      description,
+      image_url: imageUrl,
+      price,
+      original_price: originalPrice,
+      discount_percentage: discountPercentage,
+      display_order: displayOrder
+    })
+    .select()
+    .single()
+
+  if (error) throw error
+  return data as CampaignImage
+}
+
+export const updateCampaignImage = async (id: string, displayOrder: number) => {
+  const { data, error } = await supabase
+    .from('campaigns_images')
+    .update({ display_order: displayOrder })
+    .eq('id', id)
+    .select()
+    .single()
+
+  if (error) throw error
+  return data as CampaignImage
+}
+
+export const deleteCampaignImage = async (id: string) => {
+  const { error } = await supabase
+    .from('campaigns_images')
     .delete()
     .eq('id', id)
 

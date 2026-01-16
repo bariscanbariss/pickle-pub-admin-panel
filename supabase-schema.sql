@@ -64,6 +64,19 @@ CREATE TABLE about_images (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Kampanyalar için resimler tablosu (9:16 aspect ratio)
+CREATE TABLE campaigns_images (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  title TEXT NOT NULL,
+  description TEXT,
+  image_url TEXT NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  original_price DECIMAL(10, 2), -- İndirim öncesi fiyat (karşılaştırma fiyatı)
+  discount_percentage INTEGER DEFAULT 0,
+  display_order INTEGER NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Row Level Security (RLS) politikaları
 ALTER TABLE categories ENABLE ROW LEVEL SECURITY;
 ALTER TABLE products ENABLE ROW LEVEL SECURITY;
@@ -71,6 +84,7 @@ ALTER TABLE popular_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE activities ENABLE ROW LEVEL SECURITY;
 ALTER TABLE admin_users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE about_images ENABLE ROW LEVEL SECURITY;
+ALTER TABLE campaigns_images ENABLE ROW LEVEL SECURITY;
 
 -- Herkes okuyabilir (public access) - eğer varsa önce sil, sonra oluştur
 DROP POLICY IF EXISTS "Public read access for categories" ON categories;
@@ -87,6 +101,9 @@ CREATE POLICY "Public read access for activities" ON activities FOR SELECT USING
 
 DROP POLICY IF EXISTS "Public read access for about_images" ON about_images;
 CREATE POLICY "Public read access for about_images" ON about_images FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Public read access for campaigns_images" ON campaigns_images;
+CREATE POLICY "Public read access for campaigns_images" ON campaigns_images FOR SELECT USING (true);
 
 -- Storage bucket oluştur (resimleri için) - eğer yoksa
 INSERT INTO storage.buckets (id, name, public)

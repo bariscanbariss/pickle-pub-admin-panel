@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
-import { getPopularItems } from '@/lib/supabase'
+import { getCampaignImages, type CampaignImage } from '@/lib/supabase'
 import Image from 'next/image'
 import { Tag } from 'lucide-react'
 import Autoplay from "embla-carousel-autoplay"
@@ -15,22 +15,22 @@ import {
 } from "@/components/ui/carousel"
 
 export function PopularItems() {
-  const [popularItems, setPopularItems] = useState<any[]>([])
+  const [campaigns, setCampaigns] = useState<CampaignImage[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const loadPopularItems = async () => {
+    const loadCampaigns = async () => {
       try {
-        const items = await getPopularItems()
-        setPopularItems(items)
+        const data = await getCampaignImages()
+        setCampaigns(data)
       } catch (error) {
-        console.error('Popüler ürünler yüklenirken hata:', error)
+        console.log('Campaign images not loaded (table may not exist yet)')
       } finally {
         setLoading(false)
       }
     }
 
-    loadPopularItems()
+    loadCampaigns()
   }, [])
 
   if (loading) {
@@ -51,7 +51,7 @@ export function PopularItems() {
     )
   }
 
-  if (popularItems.length === 0) {
+  if (campaigns.length === 0) {
     return null
   }
 
@@ -78,58 +78,53 @@ export function PopularItems() {
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
-            {popularItems.map((item) => {
-              const product = item.products
-              if (!product) return null
+            {campaigns.map((campaign) => (
+              <CarouselItem key={campaign.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <Card className="overflow-hidden group hover:shadow-lg transition-shadow h-full">
+                  {/* Campaign Image - 9:16 */}
+                  <div className="relative aspect-[9/16] overflow-hidden bg-muted">
+                    <Image
+                      src={campaign.image_url}
+                      alt={campaign.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
 
-              return (
-                <CarouselItem key={item.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <Card className="overflow-hidden group hover:shadow-lg transition-shadow h-full">
-                    <div className="relative aspect-[9/16] overflow-hidden bg-muted">
-                      {product.image_url ? (
-                        <Image
-                          src={product.image_url}
-                          alt={product.name}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                          Resim Yok
-                        </div>
-                      )}
+                    {/* Discount Badge */}
+                    {campaign.discount_percentage > 0 && (
+                      <div className="absolute top-2 right-2 bg-accent text-accent-foreground px-3 py-1.5 rounded-full text-sm font-bold flex items-center gap-1 shadow-lg">
+                        <Tag className="w-4 h-4" />
+                        %{campaign.discount_percentage}
+                      </div>
+                    )}
+                  </div>
 
-                      {product.discount_percentage > 0 && (
-                        <div className="absolute top-2 right-2 bg-accent text-accent-foreground px-3 py-1.5 rounded-full text-sm font-bold flex items-center gap-1 shadow-lg">
-                          <Tag className="w-4 h-4" />
-                          %{product.discount_percentage}
-                        </div>
-                      )}
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-xl mb-2 text-balance line-clamp-1">
-                        {product.name}
-                      </h3>
-                      {product.description && (
-                        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                          {product.description}
-                        </p>
-                      )}
+                  {/* Campaign Info */}
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-xl mb-2 text-balance line-clamp-1">
+                      {campaign.title}
+                    </h3>
+                    {campaign.description && (
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                        {campaign.description}
+                      </p>
+                    )}
+                    {campaign.price != null && (
                       <div className="flex items-center gap-2">
                         <span className="text-2xl font-bold text-accent">
-                          {product.price} TL
+                          ₺{campaign.price.toFixed(2)}
                         </span>
-                        {product.original_price && (
+                        {campaign.original_price && campaign.original_price > campaign.price && (
                           <span className="text-sm text-muted-foreground line-through">
-                            {product.original_price} TL
+                            ₺{campaign.original_price.toFixed(2)}
                           </span>
                         )}
                       </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              )
-            })}
+                    )}
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
           </CarouselContent>
           <CarouselPrevious className="hidden md:flex" />
           <CarouselNext className="hidden md:flex" />

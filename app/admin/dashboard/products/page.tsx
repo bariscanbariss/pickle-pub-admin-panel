@@ -136,6 +136,11 @@ export default function ProductsPage() {
     setImagePreview(product.image_url)
     setEditingId(product.id)
     setShowForm(true)
+
+    // Sayfayı yukarı kaydır
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 100)
   }
 
   const handleDelete = async (id: string, imageUrl: string) => {
@@ -143,12 +148,16 @@ export default function ProductsPage() {
 
     setLoading(true)
     try {
+      console.log('Deleting product:', id)
       await deleteProduct(id)
+      console.log('Product deleted successfully')
 
       // Resmi de sil
       if (imageUrl) {
         try {
+          console.log('Deleting image:', imageUrl)
           await deleteImage(imageUrl)
+          console.log('Image deleted successfully')
         } catch (err) {
           console.log('Resim silinirken hata:', err)
         }
@@ -157,8 +166,9 @@ export default function ProductsPage() {
       toast.success('Ürün silindi')
       await loadData()
     } catch (error) {
-      toast.error('Silme işlemi başarısız')
-      console.error(error)
+      console.error('Delete error details:', error)
+      const errorMessage = error instanceof Error ? error.message : 'Bilinmeyen hata'
+      toast.error(`Silme işlemi başarısız: ${errorMessage}`)
     } finally {
       setLoading(false)
     }

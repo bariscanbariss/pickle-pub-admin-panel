@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
   { name: 'Kategoriler', href: '/admin/dashboard/categories', icon: Tags },
   { name: 'Menü Ürünleri', href: '/admin/dashboard/products', icon: Package },
-  { name: 'Kampanyalar', href: '/admin/dashboard/popular', icon: Star },
+  { name: 'Kampanyalar', href: '/admin/dashboard/campaigns', icon: Star },
   { name: 'Aktiviteler', href: '/admin/dashboard/activities', icon: Calendar },
   { name: 'Hakkımızda Görselleri', href: '/admin/dashboard/about-images', icon: ImageIcon },
 ]

@@ -72,6 +72,11 @@ export default function CategoriesPage() {
     })
     setEditingId(category.id)
     setShowForm(true)
+
+    // Sayfayı yukarı kaydır
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 100)
   }
 
   const handleDelete = async (id: string) => {
