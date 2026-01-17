@@ -2,7 +2,6 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Campaigns } from "@/components/campaigns"
 import { MenuSection } from "@/components/menu-section"
-import { PopularItems } from "@/components/popular-items"
 import { Activities } from "@/components/activities"
 import { About } from "@/components/about"
 import { Footer } from "@/components/footer"
@@ -16,7 +15,6 @@ export default function Home() {
         <Hero />
         <Campaigns />
         <MenuSection />
-        <PopularItems />
         <Activities />
         <About />
       </main>
