@@ -29,6 +29,9 @@ export default function ProductsPage() {
   const [imagePreview, setImagePreview] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
+  const [bulkEditMode, setBulkEditMode] = useState(false)
+  const [priceEdits, setPriceEdits] = useState<Record<string, {price: string, original_price: string, discount_percentage: string}>>({})
+
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -39,6 +42,49 @@ export default function ProductsPage() {
     image_url: '',
     is_active: true
   })
+
+  // Toplu fiyat düzenleme fonksiyonları
+  const handleBulkPriceChange = (id: string, field: string, value: string, product: any) => {
+    setPriceEdits(prev => ({
+      ...prev,
+      [id]: {
+        ...(prev[id] || {
+          price: product.price.toString(),
+          original_price: product.original_price?.toString() || '',
+          discount_percentage: product.discount_percentage.toString()
+        }),
+        [field]: value
+      }
+    }))
+  }
+
+  const handleBulkSave = async () => {
+    if (Object.keys(priceEdits).length === 0) {
+      setBulkEditMode(false)
+      return
+    }
+    setLoading(true)
+    try {
+      const updatePromises = Object.entries(priceEdits).map(([id, edits]) => {
+        const data = {
+          price: parseFloat(edits.price) || 0,
+          original_price: edits.original_price ? parseFloat(edits.original_price) : null,
+          discount_percentage: parseInt(edits.discount_percentage) || 0
+        }
+        return updateProduct(id, data)
+      })
+      await Promise.all(updatePromises)
+      toast.success('Fiyatlar toplu olarak güncellendi')
+      setPriceEdits({})
+      setBulkEditMode(false)
+      await loadData()
+    } catch (error) {
+      toast.error('Fiyat güncellenirken hata oluştu')
+      console.error(error)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   useEffect(() => {
     loadData()
@@ -204,10 +250,34 @@ export default function ProductsPage() {
             Menü ürünlerinizi yönetin
           </p>
         </div>
-        <Button onClick={() => setShowForm(true)} disabled={showForm}>
-          <Plus className="w-4 h-4 mr-2" />
-          Yeni Ürün
-        </Button>
+        <div className="flex gap-2">
+          <Button 
+            variant={bulkEditMode ? "default" : "outline"} 
+            onClick={() => {
+              if (bulkEditMode) {
+                handleBulkSave()
+              } else {
+                setPriceEdits({})
+                setShowForm(false)
+                setBulkEditMode(true)
+              }
+            }}
+            disabled={loading}
+          >
+            {loading && bulkEditMode ? 'Kaydediliyor...' : bulkEditMode ? 'Değişiklikleri Kaydet' : 'Hızlı Fiyat Düzenle'}
+          </Button>
+          {bulkEditMode && (
+            <Button variant="outline" onClick={() => { setBulkEditMode(false); setPriceEdits({}); }}>
+              İptal
+            </Button>
+          )}
+          {!bulkEditMode && (
+            <Button onClick={() => setShowForm(true)} disabled={showForm}>
+              <Plus className="w-4 h-4 mr-2" />
+              Yeni Ürün
+            </Button>
+          )}
+        </div>
       </div>
 
       {/* Kategori Filtresi */}
@@ -394,8 +464,68 @@ export default function ProductsPage() {
       )}
 
       {/* Ürünler Listesi */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProducts.map((product) => (
+      {bulkEditMode ? (
+        <div className="bg-card rounded-lg border overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm text-left">
+              <thead className="bg-muted text-muted-foreground">
+                <tr>
+                  <th className="px-4 py-3 font-medium">#</th>
+                  <th className="px-4 py-3 font-medium">Satır Adı</th>
+                  <th className="px-4 py-3 font-medium">Kategori</th>
+                  <th className="px-4 py-3 font-medium">Fiyat (TL)</th>
+                  <th className="px-4 py-3 font-medium">Eski Fiyat (TL)</th>
+                  <th className="px-4 py-3 font-medium">İndirim (%)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {filteredProducts.map((p, index) => {
+                  const edit = priceEdits[p.id] || {
+                    price: p.price.toString(),
+                    original_price: p.original_price?.toString() || '',
+                    discount_percentage: p.discount_percentage.toString()
+                  }
+                  return (
+                    <tr key={p.id} className="hover:bg-muted/50 transition-colors">
+                      <td className="px-4 py-2">{index + 1}</td>
+                      <td className="px-4 py-2 font-medium">{p.name}</td>
+                      <td className="px-4 py-2 text-muted-foreground">{p.categories?.name || '-'}</td>
+                      <td className="px-4 py-2">
+                        <input 
+                          type="number" 
+                          step="0.01"
+                          className="w-24 px-2 py-1 rounded border min-w-[80px] bg-background text-foreground focus:ring-2 focus:ring-primary focus:outline-none"
+                          value={edit.price}
+                          onChange={(e) => handleBulkPriceChange(p.id, 'price', e.target.value, p)}
+                        />
+                      </td>
+                      <td className="px-4 py-2">
+                        <input 
+                          type="number" 
+                          step="0.01"
+                          className="w-24 px-2 py-1 rounded border min-w-[80px] bg-background text-foreground focus:ring-2 focus:ring-primary focus:outline-none"
+                          value={edit.original_price}
+                          onChange={(e) => handleBulkPriceChange(p.id, 'original_price', e.target.value, p)}
+                        />
+                      </td>
+                      <td className="px-4 py-2">
+                        <input 
+                          type="number" 
+                          className="w-20 px-2 py-1 rounded border min-w-[60px] bg-background text-foreground focus:ring-2 focus:ring-primary focus:outline-none"
+                          value={edit.discount_percentage}
+                          onChange={(e) => handleBulkPriceChange(p.id, 'discount_percentage', e.target.value, p)}
+                        />
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProducts.map((product) => (
           <Card key={product.id} className="group overflow-hidden hover:shadow-lg transition-shadow">
             <div className="relative h-48 bg-muted">
               {product.image_url ? (
@@ -477,7 +607,7 @@ export default function ProductsPage() {
             </CardContent>
           </Card>
         ))}
-
+        
         {filteredProducts.length === 0 && !loading && (
           <Card className="col-span-full">
             <CardContent className="flex flex-col items-center justify-center py-12">
@@ -493,7 +623,8 @@ export default function ProductsPage() {
             </CardContent>
           </Card>
         )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }
