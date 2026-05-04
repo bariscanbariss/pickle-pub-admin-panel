@@ -1,0 +1,90 @@
+[
+  {
+    "id": "5da0d731-8c71-440b-8072-8d8fe818ecb8",
+    "name": "İçecekler",
+    "description": "Ferahlatıcı içeceklerimiz",
+    "display_order": 2,
+    "created_at": "2026-01-15T22:39:07.456Z",
+    "updated_at": "2026-01-15T22:39:07.456Z"
+  },
+  {
+    "id": "cde0b6a7-e8c9-453e-85c7-17f13681ff21",
+    "name": "Kokteyl",
+    "description": "Özel kokteyllerimiz",
+    "display_order": 3,
+    "created_at": "2026-01-15T22:39:07.456Z",
+    "updated_at": "2026-01-15T22:39:07.456Z"
+  },
+  {
+    "id": "292f67e8-7c80-401a-8fb6-28b2ddfb1b73",
+    "name": "Aperatif",
+    "description": "Hafif atıştırmalıklar",
+    "display_order": 4,
+    "created_at": "2026-01-15T22:39:07.456Z",
+    "updated_at": "2026-01-15T22:39:07.456Z"
+  },
+  {
+    "id": "bf783886-4e94-4f60-a7f6-a40271c2445b",
+    "name": "Kahve",
+    "description": "Özel kahve çeşitleri",
+    "display_order": 0,
+    "created_at": "2026-01-16T10:08:45.542Z",
+    "updated_at": "2026-01-16T10:08:45.542Z"
+  },
+  {
+    "id": "bbb53c66-a8f9-4391-bd44-1fc8c12feb5f",
+    "name": "Biralar",
+    "description": "Soğuk bira çeşitleri",
+    "display_order": 1,
+    "created_at": "2026-01-16T10:08:45.699Z",
+    "updated_at": "2026-01-16T10:08:45.699Z"
+  },
+  {
+    "id": "2e9cd98e-8569-4715-9598-0eea44b5f5e4",
+    "name": "Shot İçkiler",
+    "description": "Tek yudumluk içkiler",
+    "display_order": 2,
+    "created_at": "2026-01-16T10:08:45.838Z",
+    "updated_at": "2026-01-16T10:08:45.838Z"
+  },
+  {
+    "id": "be7b38b7-84d8-4554-8c27-5b9d982761c6",
+    "name": "Viskiler",
+    "description": "Kaliteli viski çeşitleri",
+    "display_order": 3,
+    "created_at": "2026-01-16T10:08:45.952Z",
+    "updated_at": "2026-01-16T10:08:45.952Z"
+  },
+  {
+    "id": "0c17bce3-1390-49b1-a41b-c8e7aa72de5f",
+    "name": "Kokteyller",
+    "description": "Özel kokteyl çeşitleri",
+    "display_order": 4,
+    "created_at": "2026-01-16T10:08:46.080Z",
+    "updated_at": "2026-01-16T10:08:46.080Z"
+  },
+  {
+    "id": "8d3b97dc-0b4d-4d47-b97a-96107e7e125e",
+    "name": "Yemekler",
+    "description": "Ana yemek ve atıştırmalıklar",
+    "display_order": 5,
+    "created_at": "2026-01-16T10:08:46.212Z",
+    "updated_at": "2026-01-16T10:08:46.212Z"
+  },
+  {
+    "id": "0e185213-3418-432f-ba1f-e10f86270036",
+    "name": "Atıştırmalıklar",
+    "description": "Hafif atıştırmalıklar",
+    "display_order": 6,
+    "created_at": "2026-01-16T10:08:46.323Z",
+    "updated_at": "2026-01-16T10:08:46.323Z"
+  },
+  {
+    "id": "76272ec1-7767-4875-86f0-7ef83c5b7d26",
+    "name": "Alkolsüz İçecekler",
+    "description": "Meşrubatlar ve alkolsüz içecekler",
+    "display_order": 7,
+    "created_at": "2026-01-16T10:08:46.451Z",
+    "updated_at": "2026-01-16T10:08:46.451Z"
+  }
+]

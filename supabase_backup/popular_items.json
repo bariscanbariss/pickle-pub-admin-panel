@@ -1,0 +1,38 @@
+[
+  {
+    "id": "4985e142-d230-445c-87d8-b7693c551f17",
+    "product_id": "76d50758-e801-494e-bef3-3b61d897209e",
+    "display_order": 2,
+    "created_at": "2026-01-15T22:39:07.456Z"
+  },
+  {
+    "id": "6f05f8f7-489f-44e9-99b4-b7f0f9f7932b",
+    "product_id": "59f8aff2-e5dc-4288-9bb3-526135d993be",
+    "display_order": 3,
+    "created_at": "2026-01-15T22:39:07.456Z"
+  },
+  {
+    "id": "077278e6-b0a7-4241-80cf-a835a028780b",
+    "product_id": "9bfaf46f-be78-4a9e-8921-18d518069468",
+    "display_order": 0,
+    "created_at": "2026-01-16T10:09:13.458Z"
+  },
+  {
+    "id": "111142ab-806c-43b2-9df9-f6437849e4c5",
+    "product_id": "3e75b401-3c69-4a99-a901-d1ee42fafcfb",
+    "display_order": 1,
+    "created_at": "2026-01-16T10:09:13.701Z"
+  },
+  {
+    "id": "c6cf6200-3bd6-4930-bf58-1f5e69774514",
+    "product_id": "cbd5db45-1dd3-456b-baa8-e029598a1f68",
+    "display_order": 2,
+    "created_at": "2026-01-16T10:09:13.983Z"
+  },
+  {
+    "id": "93b7a794-a5aa-473a-86a9-3e1b287e528b",
+    "product_id": "c1d350d5-2d8b-4dbc-9af2-94298f7961ae",
+    "display_order": 3,
+    "created_at": "2026-01-16T10:09:14.648Z"
+  }
+]

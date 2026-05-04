@@ -1,0 +1,20 @@
+[
+  {
+    "id": "f32d62cb-b727-4f6a-a43c-e3f8618138f8",
+    "image_url": "https://mskfpikoiaeeuuwrkrsw.supabase.co/storage/v1/object/public/product-images/about/60jwg4m4m78-1768748616218.jpeg",
+    "display_order": 0,
+    "created_at": "2026-01-18T15:03:58.697Z"
+  },
+  {
+    "id": "52f350b7-3e02-48ef-a02d-d2dc2dfb29f2",
+    "image_url": "https://mskfpikoiaeeuuwrkrsw.supabase.co/storage/v1/object/public/product-images/about/ky2a3sufw-1768748784678.jpeg",
+    "display_order": 1,
+    "created_at": "2026-01-18T15:06:45.050Z"
+  },
+  {
+    "id": "2f5d2296-2a5d-4e96-a0fe-f18ba1cd397e",
+    "image_url": "https://mskfpikoiaeeuuwrkrsw.supabase.co/storage/v1/object/public/product-images/about/xtd1ciq3t7a-1768748865692.jpeg",
+    "display_order": 2,
+    "created_at": "2026-01-18T15:08:06.123Z"
+  }
+]

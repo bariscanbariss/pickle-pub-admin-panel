@@ -1,0 +1,3727 @@
+[
+  {
+    "id": "368d8871-376a-49f6-9498-2992a801f0ab",
+    "bucket_id": "product-images",
+    "name": "products/1768557860917-filter.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:21.660Z",
+    "updated_at": "2026-01-16T10:04:21.660Z",
+    "last_accessed_at": "2026-01-16T10:04:21.660Z",
+    "metadata": {
+      "eTag": "\"20aa68edf25f099f58a1d782e22c02ba\"",
+      "size": 9742,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:22.000Z",
+      "contentLength": 9742,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557860917-filter.webp"
+    ],
+    "version": "16124f34-5083-4b97-8023-0d82d798cffa",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "b75d32be-3460-4541-965a-4f379a681074",
+    "bucket_id": "product-images",
+    "name": "products/1768558126418-filter.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:47.119Z",
+    "updated_at": "2026-01-16T10:08:47.119Z",
+    "last_accessed_at": "2026-01-16T10:08:47.119Z",
+    "metadata": {
+      "eTag": "\"20aa68edf25f099f58a1d782e22c02ba\"",
+      "size": 9742,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:48.000Z",
+      "contentLength": 9742,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558126418-filter.webp"
+    ],
+    "version": "b6939862-ddd3-4627-8fd2-d9741757374e",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "393da62d-f599-4b62-8a87-8ebbe2ccadd5",
+    "bucket_id": "product-images",
+    "name": "products/1768557861849-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:22.097Z",
+    "updated_at": "2026-01-16T10:04:22.097Z",
+    "last_accessed_at": "2026-01-16T10:04:22.097Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:23.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557861849-beer.webp"
+    ],
+    "version": "e307cf9a-e681-4431-b5d6-6b187ace6a95",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "9987a5f8-8925-4afb-b33a-6dfbbc440c6b",
+    "bucket_id": "product-images",
+    "name": "products/1768557862362-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:22.640Z",
+    "updated_at": "2026-01-16T10:04:22.640Z",
+    "last_accessed_at": "2026-01-16T10:04:22.640Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:23.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557862362-beer.webp"
+    ],
+    "version": "7bb5b799-dde5-4f36-a982-fddb6d823dc5",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "c0fca86e-6bde-4869-b331-156c263a4003",
+    "bucket_id": "product-images",
+    "name": "products/1768558127357-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:47.663Z",
+    "updated_at": "2026-01-16T10:08:47.663Z",
+    "last_accessed_at": "2026-01-16T10:08:47.663Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:48.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558127357-beer.webp"
+    ],
+    "version": "f4c74b06-d495-4ff9-a87a-ae1ac41d8286",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "16865b51-b70d-4ea1-8140-26881d627ada",
+    "bucket_id": "product-images",
+    "name": "products/1768557862771-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:23.072Z",
+    "updated_at": "2026-01-16T10:04:23.072Z",
+    "last_accessed_at": "2026-01-16T10:04:23.072Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:24.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557862771-beer.webp"
+    ],
+    "version": "6dab1f82-bf0f-4fdc-a216-c3207746d400",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "03759c55-8edd-474a-a4c9-90323d8f10d3",
+    "bucket_id": "product-images",
+    "name": "products/1768557863361-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:23.589Z",
+    "updated_at": "2026-01-16T10:04:23.589Z",
+    "last_accessed_at": "2026-01-16T10:04:23.589Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:24.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557863361-beer.webp"
+    ],
+    "version": "ce0ec196-bfc3-47a4-a751-e228c8d30f89",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "dcecf4ba-c530-44be-8382-67e8edc7969b",
+    "bucket_id": "product-images",
+    "name": "products/1768558127770-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:48.091Z",
+    "updated_at": "2026-01-16T10:08:48.091Z",
+    "last_accessed_at": "2026-01-16T10:08:48.091Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:49.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558127770-beer.webp"
+    ],
+    "version": "08925aa9-d1f3-4736-ad22-5378574231c8",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "16becf96-8a2e-4255-b3b7-80089d3cebb7",
+    "bucket_id": "product-images",
+    "name": "products/1768557863778-hellboy.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:24.226Z",
+    "updated_at": "2026-01-16T10:04:24.226Z",
+    "last_accessed_at": "2026-01-16T10:04:24.226Z",
+    "metadata": {
+      "eTag": "\"97036dffab6a9fead0b4a17dd786f847\"",
+      "size": 116242,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:25.000Z",
+      "contentLength": 116242,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557863778-hellboy.webp"
+    ],
+    "version": "b0c3364b-d4ee-4b2c-afda-59a9e06eff13",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ae2fe8c4-f0da-4725-8e4d-5558c8fe71f5",
+    "bucket_id": "product-images",
+    "name": "products/1768557864350-beersalt.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:24.624Z",
+    "updated_at": "2026-01-16T10:04:24.624Z",
+    "last_accessed_at": "2026-01-16T10:04:24.624Z",
+    "metadata": {
+      "eTag": "\"38aad22014e0e800a31ea724b05a47f4\"",
+      "size": 13918,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:25.000Z",
+      "contentLength": 13918,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557864350-beersalt.webp"
+    ],
+    "version": "43cfd35d-5fb9-455d-a674-f4c9d0c3d6ba",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "422f1ac3-331a-4434-88ce-f377d76f814d",
+    "bucket_id": "product-images",
+    "name": "products/1768558128250-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:48.604Z",
+    "updated_at": "2026-01-16T10:08:48.604Z",
+    "last_accessed_at": "2026-01-16T10:08:48.604Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:49.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558128250-beer.webp"
+    ],
+    "version": "5567eac0-044c-4426-b371-1058e16d74db",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ce1dbdc1-064d-4c7b-8d4d-6113c4ffd5f2",
+    "bucket_id": "product-images",
+    "name": "products/1768557864777-beersalt.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:25.009Z",
+    "updated_at": "2026-01-16T10:04:25.009Z",
+    "last_accessed_at": "2026-01-16T10:04:25.009Z",
+    "metadata": {
+      "eTag": "\"38aad22014e0e800a31ea724b05a47f4\"",
+      "size": 13918,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:25.000Z",
+      "contentLength": 13918,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557864777-beersalt.webp"
+    ],
+    "version": "58f50cc8-8f63-4dea-aba9-d728bbd0650b",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "96b785f5-6dd0-4b8f-9221-ad00cc55df74",
+    "bucket_id": "product-images",
+    "name": "products/1768557865123-beersalt.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:25.363Z",
+    "updated_at": "2026-01-16T10:04:25.363Z",
+    "last_accessed_at": "2026-01-16T10:04:25.363Z",
+    "metadata": {
+      "eTag": "\"38aad22014e0e800a31ea724b05a47f4\"",
+      "size": 13918,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:26.000Z",
+      "contentLength": 13918,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557865123-beersalt.webp"
+    ],
+    "version": "ca25b272-7474-446a-a27f-c56f48706ede",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "2134ff1f-e75a-4ead-8ab4-a7d1edd3b448",
+    "bucket_id": "product-images",
+    "name": "products/1768557865552-tuborgbottle.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:25.806Z",
+    "updated_at": "2026-01-16T10:04:25.806Z",
+    "last_accessed_at": "2026-01-16T10:04:25.806Z",
+    "metadata": {
+      "eTag": "\"f7239d82312b5ca504118b3032fde0fa\"",
+      "size": 28866,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:26.000Z",
+      "contentLength": 28866,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557865552-tuborgbottle.webp"
+    ],
+    "version": "18b00851-dbd3-4bff-a623-ea65ae5cece1",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "7c4b8230-1a94-4718-861b-369d136b9ac0",
+    "bucket_id": "product-images",
+    "name": "products/1768557865965-heineken.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:26.167Z",
+    "updated_at": "2026-01-16T10:04:26.167Z",
+    "last_accessed_at": "2026-01-16T10:04:26.167Z",
+    "metadata": {
+      "eTag": "\"3de09bb5dc09cd10effc6f2339a6883d\"",
+      "size": 3820,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:27.000Z",
+      "contentLength": 3820,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557865965-heineken.webp"
+    ],
+    "version": "18d8d97f-f062-4b28-becd-6bd73fb651f9",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "c90e14bf-74ba-4bf1-a4d2-04837b5e107f",
+    "bucket_id": "product-images",
+    "name": "products/1768557866347-heinekenteneke.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:26.545Z",
+    "updated_at": "2026-01-16T10:04:26.545Z",
+    "last_accessed_at": "2026-01-16T10:04:26.545Z",
+    "metadata": {
+      "eTag": "\"1714c2a0c523eb7164e6eea34d8d3274\"",
+      "size": 5106,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:27.000Z",
+      "contentLength": 5106,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557866347-heinekenteneke.webp"
+    ],
+    "version": "988ac1ed-07ae-4e0f-af7c-8ae6f4504206",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ae95ca94-01a2-4ff6-9ee1-95ca765244e1",
+    "bucket_id": "product-images",
+    "name": "products/1768557866637-corona.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:26.847Z",
+    "updated_at": "2026-01-16T10:04:26.847Z",
+    "last_accessed_at": "2026-01-16T10:04:26.847Z",
+    "metadata": {
+      "eTag": "\"57c053f5da1f8708a456608cd5edc7dd\"",
+      "size": 19872,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:27.000Z",
+      "contentLength": 19872,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557866637-corona.webp"
+    ],
+    "version": "8215bda7-a8dc-492e-90f9-2d040ed9b08b",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "cc82f581-13a0-4d9e-b7c1-6e97d481466c",
+    "bucket_id": "product-images",
+    "name": "products/1768558128778-beer.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:49.024Z",
+    "updated_at": "2026-01-16T10:08:49.024Z",
+    "last_accessed_at": "2026-01-16T10:08:49.024Z",
+    "metadata": {
+      "eTag": "\"1a78bc504b2f6922f96125d645546663\"",
+      "size": 12772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:49.000Z",
+      "contentLength": 12772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558128778-beer.webp"
+    ],
+    "version": "fea34b4e-8361-46fa-b11a-3190fc1aab12",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "87438a05-9691-4122-ab5c-4aa1de9caca4",
+    "bucket_id": "product-images",
+    "name": "products/1768557866969-guiness.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:27.213Z",
+    "updated_at": "2026-01-16T10:04:27.213Z",
+    "last_accessed_at": "2026-01-16T10:04:27.213Z",
+    "metadata": {
+      "eTag": "\"d8d46e02afe68ea96fba6097eeb0104e\"",
+      "size": 10100,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:28.000Z",
+      "contentLength": 10100,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557866969-guiness.webp"
+    ],
+    "version": "6433b4b8-5cf9-43ba-8ca7-ace0e93926b5",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "1427e77f-dea9-41eb-85cd-ee0c134d11b8",
+    "bucket_id": "product-images",
+    "name": "campaigns/8usi3jaeyls-1768572816782.webp",
+    "owner": null,
+    "created_at": "2026-01-16T14:13:37.645Z",
+    "updated_at": "2026-01-16T14:13:37.645Z",
+    "last_accessed_at": "2026-01-16T14:13:37.645Z",
+    "metadata": {
+      "eTag": "\"2cc0f56dad8f655950145bb6306ca551\"",
+      "size": 35928,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T14:13:38.000Z",
+      "contentLength": 35928,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "campaigns",
+      "8usi3jaeyls-1768572816782.webp"
+    ],
+    "version": "e676eabe-9964-4b12-908f-45fa58715aa5",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "edc92a77-6371-43c4-b41a-058668469166",
+    "bucket_id": "product-images",
+    "name": "products/1768557867321-amsterdam.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:27.542Z",
+    "updated_at": "2026-01-16T10:04:27.542Z",
+    "last_accessed_at": "2026-01-16T10:04:27.542Z",
+    "metadata": {
+      "eTag": "\"c45afbecc58bea7960a19057ca322350\"",
+      "size": 2944,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:28.000Z",
+      "contentLength": 2944,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557867321-amsterdam.webp"
+    ],
+    "version": "0c880a95-d819-4396-b06f-444e9f7b3eee",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "02f2eb08-3750-4428-990c-0e43bcdf760a",
+    "bucket_id": "product-images",
+    "name": "products/1768558129157-hellboy.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:49.767Z",
+    "updated_at": "2026-01-16T10:08:49.767Z",
+    "last_accessed_at": "2026-01-16T10:08:49.767Z",
+    "metadata": {
+      "eTag": "\"97036dffab6a9fead0b4a17dd786f847\"",
+      "size": 116242,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:50.000Z",
+      "contentLength": 116242,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558129157-hellboy.webp"
+    ],
+    "version": "af40623e-9b88-43ac-b302-b5973e9b59ba",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "10db60e1-8bed-47fb-b4b9-db57f86377e7",
+    "bucket_id": "product-images",
+    "name": "products/1768557867654-tequila.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:27.876Z",
+    "updated_at": "2026-01-16T10:04:27.876Z",
+    "last_accessed_at": "2026-01-16T10:04:27.876Z",
+    "metadata": {
+      "eTag": "\"205ec6ea1097571677d447530ca08a36\"",
+      "size": 16650,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:28.000Z",
+      "contentLength": 16650,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557867654-tequila.webp"
+    ],
+    "version": "4aa6a1dd-5319-4293-9353-f518d2fd13db",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "68ae2abb-bfb6-4b93-a2bc-efeff297ac23",
+    "bucket_id": "product-images",
+    "name": "products/1768557868003-jager.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:28.215Z",
+    "updated_at": "2026-01-16T10:04:28.215Z",
+    "last_accessed_at": "2026-01-16T10:04:28.215Z",
+    "metadata": {
+      "eTag": "\"460b45f8eb228ab50d13b8664dce2e14\"",
+      "size": 15000,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:29.000Z",
+      "contentLength": 15000,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557868003-jager.webp"
+    ],
+    "version": "60ab6c89-83db-471d-b10a-d60ceed7918c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "7b8f2fc1-c415-4ef2-8ba6-b858a213912b",
+    "bucket_id": "product-images",
+    "name": "products/1768558129921-beersalt.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:50.126Z",
+    "updated_at": "2026-01-16T10:08:50.126Z",
+    "last_accessed_at": "2026-01-16T10:08:50.126Z",
+    "metadata": {
+      "eTag": "\"38aad22014e0e800a31ea724b05a47f4\"",
+      "size": 13918,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:51.000Z",
+      "contentLength": 13918,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558129921-beersalt.webp"
+    ],
+    "version": "b42106c7-0673-4643-bdb4-2621cf4e37fe",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "6614b08f-fde8-4f13-970a-f2af8e8c9000",
+    "bucket_id": "product-images",
+    "name": "products/1768557868351-blacklabel.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:28.616Z",
+    "updated_at": "2026-01-16T10:04:28.616Z",
+    "last_accessed_at": "2026-01-16T10:04:28.616Z",
+    "metadata": {
+      "eTag": "\"533713879963b0964d55ad2e7148cdf2\"",
+      "size": 5728,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:29.000Z",
+      "contentLength": 5728,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557868351-blacklabel.webp"
+    ],
+    "version": "1a2fb945-75ce-4e22-9417-b148ecbbd365",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "5646f7dc-595f-4a03-8e59-7d31a46b9576",
+    "bucket_id": "product-images",
+    "name": "products/1768557868808-jackshot.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:29.249Z",
+    "updated_at": "2026-01-16T10:04:29.249Z",
+    "last_accessed_at": "2026-01-16T10:04:29.249Z",
+    "metadata": {
+      "eTag": "\"85f8a3396b048c6271bb53ba4412c2e9\"",
+      "size": 16848,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:30.000Z",
+      "contentLength": 16848,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557868808-jackshot.webp"
+    ],
+    "version": "c1c79b8d-30c0-4196-a56d-d25a85f07865",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "5bfc9a3c-51f2-4cf8-a4b4-b8071e3bbe04",
+    "bucket_id": "product-images",
+    "name": "products/1768557869398-baileys.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:29.634Z",
+    "updated_at": "2026-01-16T10:04:29.634Z",
+    "last_accessed_at": "2026-01-16T10:04:29.634Z",
+    "metadata": {
+      "eTag": "\"3ad7d645449492a1bc72d3d8cc8e0272\"",
+      "size": 5450,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:30.000Z",
+      "contentLength": 5450,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557869398-baileys.webp"
+    ],
+    "version": "877b8bc0-cdf4-425d-9fed-d759c581e07c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "07330098-433b-415b-a801-bfa8f0f8242e",
+    "bucket_id": "product-images",
+    "name": "products/1768557869815-zivania.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:30.051Z",
+    "updated_at": "2026-01-16T10:04:30.051Z",
+    "last_accessed_at": "2026-01-16T10:04:30.051Z",
+    "metadata": {
+      "eTag": "\"583389ec87985687e13c1e8548ad277f\"",
+      "size": 16324,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:30.000Z",
+      "contentLength": 16324,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557869815-zivania.webp"
+    ],
+    "version": "5739cb87-5eb7-45d7-b817-d406fc18975c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8a9f90c5-67a2-4ed6-9acc-770104fb89aa",
+    "bucket_id": "product-images",
+    "name": "products/1768557870170-5shot.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:30.391Z",
+    "updated_at": "2026-01-16T10:04:30.391Z",
+    "last_accessed_at": "2026-01-16T10:04:30.391Z",
+    "metadata": {
+      "eTag": "\"0fc61b8674d8da027af1abe91b73f20c\"",
+      "size": 17358,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:31.000Z",
+      "contentLength": 17358,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557870170-5shot.webp"
+    ],
+    "version": "4b1eec1a-007c-4f70-b0c6-68cd4c6599f5",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "5c35df08-91f9-40d7-ad14-4e81d280bacd",
+    "bucket_id": "product-images",
+    "name": "products/1768557870496-chivas.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:30.732Z",
+    "updated_at": "2026-01-16T10:04:30.732Z",
+    "last_accessed_at": "2026-01-16T10:04:30.732Z",
+    "metadata": {
+      "eTag": "\"7f7febdef96bb7b4e5a854fc975f5be7\"",
+      "size": 15332,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:31.000Z",
+      "contentLength": 15332,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557870496-chivas.webp"
+    ],
+    "version": "b73ea1d8-664a-455b-a446-c12c347c10cf",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ba75d84a-361a-44f9-94cb-f8380bae237a",
+    "bucket_id": "product-images",
+    "name": "products/1768557870832-blacklabel.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:31.057Z",
+    "updated_at": "2026-01-16T10:04:31.057Z",
+    "last_accessed_at": "2026-01-16T10:04:31.057Z",
+    "metadata": {
+      "eTag": "\"533713879963b0964d55ad2e7148cdf2\"",
+      "size": 5728,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:32.000Z",
+      "contentLength": 5728,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557870832-blacklabel.webp"
+    ],
+    "version": "4d9df5dc-6a66-4ae0-9a0e-c409aa5bf23f",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "f5d81849-543c-4755-93a5-26915d908281",
+    "bucket_id": "product-images",
+    "name": "products/1768558130248-beersalt.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:50.469Z",
+    "updated_at": "2026-01-16T10:08:50.469Z",
+    "last_accessed_at": "2026-01-16T10:08:50.469Z",
+    "metadata": {
+      "eTag": "\"38aad22014e0e800a31ea724b05a47f4\"",
+      "size": 13918,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:51.000Z",
+      "contentLength": 13918,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558130248-beersalt.webp"
+    ],
+    "version": "0434612a-b743-468a-b41a-b5d046b649d6",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "cc6751ba-716d-4e0a-996e-7eeb20b28d00",
+    "bucket_id": "product-images",
+    "name": "products/1768557871146-jackglass.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:31.359Z",
+    "updated_at": "2026-01-16T10:04:31.359Z",
+    "last_accessed_at": "2026-01-16T10:04:31.359Z",
+    "metadata": {
+      "eTag": "\"35d837bde8f70a157fae4f26af651b69\"",
+      "size": 22704,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:32.000Z",
+      "contentLength": 22704,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557871146-jackglass.webp"
+    ],
+    "version": "c1083221-f14c-4585-bd80-8af946434686",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "0f2aa2d7-513a-4880-8a1c-6c5649f8f554",
+    "bucket_id": "product-images",
+    "name": "products/1768557871443-jameson.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:31.708Z",
+    "updated_at": "2026-01-16T10:04:31.708Z",
+    "last_accessed_at": "2026-01-16T10:04:31.708Z",
+    "metadata": {
+      "eTag": "\"d0eab014e69c7121e0adc04b562a009f\"",
+      "size": 13280,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:32.000Z",
+      "contentLength": 13280,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557871443-jameson.webp"
+    ],
+    "version": "3111e03d-c86a-4377-a5ff-efaf1d500f8e",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "a15d2920-1a33-494d-a768-d49c76dd12dd",
+    "bucket_id": "product-images",
+    "name": "products/1768558130568-beersalt.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:50.790Z",
+    "updated_at": "2026-01-16T10:08:50.790Z",
+    "last_accessed_at": "2026-01-16T10:08:50.790Z",
+    "metadata": {
+      "eTag": "\"38aad22014e0e800a31ea724b05a47f4\"",
+      "size": 13918,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:51.000Z",
+      "contentLength": 13918,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558130568-beersalt.webp"
+    ],
+    "version": "ce34d0bd-46c4-40bb-a325-91ff40f397c2",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "b80e1eed-6d51-4b95-a0b8-badbc564730d",
+    "bucket_id": "product-images",
+    "name": "products/1768557871853-jimbean.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:32.100Z",
+    "updated_at": "2026-01-16T10:04:32.100Z",
+    "last_accessed_at": "2026-01-16T10:04:32.100Z",
+    "metadata": {
+      "eTag": "\"d793171d4377a01c4f2b65735930619d\"",
+      "size": 12410,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:33.000Z",
+      "contentLength": 12410,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557871853-jimbean.webp"
+    ],
+    "version": "5ecd9636-daa3-48aa-b715-faecdb32ab54",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "0a101254-3aca-443a-ba2a-7152b849474d",
+    "bucket_id": "product-images",
+    "name": "campaigns/e8yvgues2o-1768572987931.webp",
+    "owner": null,
+    "created_at": "2026-01-16T14:16:28.725Z",
+    "updated_at": "2026-01-16T14:16:28.725Z",
+    "last_accessed_at": "2026-01-16T14:16:28.725Z",
+    "metadata": {
+      "eTag": "\"2cc0f56dad8f655950145bb6306ca551\"",
+      "size": 35928,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T14:16:29.000Z",
+      "contentLength": 35928,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "campaigns",
+      "e8yvgues2o-1768572987931.webp"
+    ],
+    "version": "24acd016-003c-48f9-ac6c-91d1c977ca4f",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8be3be31-79b0-4906-ad84-514987219f8a",
+    "bucket_id": "product-images",
+    "name": "products/1768557872211-fireball.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:32.449Z",
+    "updated_at": "2026-01-16T10:04:32.449Z",
+    "last_accessed_at": "2026-01-16T10:04:32.449Z",
+    "metadata": {
+      "eTag": "\"793bf8ecb5157563706ca836a5177725\"",
+      "size": 5734,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:33.000Z",
+      "contentLength": 5734,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557872211-fireball.webp"
+    ],
+    "version": "219589b9-96ae-496c-9aef-3ac2a5b77c80",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "a3e2fb6f-201a-4d6a-a4ef-5569f0509d49",
+    "bucket_id": "product-images",
+    "name": "products/1768558130905-tuborgbottle.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:51.172Z",
+    "updated_at": "2026-01-16T10:08:51.172Z",
+    "last_accessed_at": "2026-01-16T10:08:51.172Z",
+    "metadata": {
+      "eTag": "\"f7239d82312b5ca504118b3032fde0fa\"",
+      "size": 28866,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:52.000Z",
+      "contentLength": 28866,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558130905-tuborgbottle.webp"
+    ],
+    "version": "8c0fdcf8-9658-4f81-97b0-54b9791013ec",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "09e5489b-d1e9-4ef1-b54e-5f2fb15e299b",
+    "bucket_id": "product-images",
+    "name": "products/1768557872545-wniskey.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:32.757Z",
+    "updated_at": "2026-01-16T10:04:32.757Z",
+    "last_accessed_at": "2026-01-16T10:04:32.757Z",
+    "metadata": {
+      "eTag": "\"7ca7d6f4af6f2975770ff09959813292\"",
+      "size": 9036,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:33.000Z",
+      "contentLength": 9036,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557872545-wniskey.webp"
+    ],
+    "version": "5a0f0cea-9d0a-43ac-af4c-c48caea497c8",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "0aef52d8-374b-47b6-b493-7b29739452ed",
+    "bucket_id": "product-images",
+    "name": "products/1768557872870-barbieglass.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:33.095Z",
+    "updated_at": "2026-01-16T10:04:33.095Z",
+    "last_accessed_at": "2026-01-16T10:04:33.095Z",
+    "metadata": {
+      "eTag": "\"21808ef10f615f4a44ae51bcf3a4d303\"",
+      "size": 11806,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:34.000Z",
+      "contentLength": 11806,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557872870-barbieglass.webp"
+    ],
+    "version": "36253062-7987-4e03-9cd2-79520dc54f79",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "b3c95edc-d12f-415f-8975-6172931561af",
+    "bucket_id": "product-images",
+    "name": "products/1768557873188-jaggerito1.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:33.424Z",
+    "updated_at": "2026-01-16T10:04:33.424Z",
+    "last_accessed_at": "2026-01-16T10:04:33.424Z",
+    "metadata": {
+      "eTag": "\"f0602fb7514323885d7255df97efdb1a\"",
+      "size": 3534,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:34.000Z",
+      "contentLength": 3534,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557873188-jaggerito1.webp"
+    ],
+    "version": "2d5d6973-6c6a-4720-a42f-0a75818dc4b6",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "2a2f7373-8ebd-4fc7-9749-928c679d475b",
+    "bucket_id": "product-images",
+    "name": "products/1768557873760-aperol.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:33.990Z",
+    "updated_at": "2026-01-16T10:04:33.990Z",
+    "last_accessed_at": "2026-01-16T10:04:33.990Z",
+    "metadata": {
+      "eTag": "\"93ef3197314a9385625da846c70a0f0e\"",
+      "size": 15332,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:34.000Z",
+      "contentLength": 15332,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557873760-aperol.webp"
+    ],
+    "version": "e6d6d60e-ca97-4be5-944f-05d1f760b280",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "f4a9dab4-c111-45da-9fcb-aa4f75b6e2d4",
+    "bucket_id": "product-images",
+    "name": "products/1768557874081-sunbath.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:34.317Z",
+    "updated_at": "2026-01-16T10:04:34.317Z",
+    "last_accessed_at": "2026-01-16T10:04:34.317Z",
+    "metadata": {
+      "eTag": "\"fd27ef47e61157ba38241fc25541dbaf\"",
+      "size": 9242,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:35.000Z",
+      "contentLength": 9242,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557874081-sunbath.webp"
+    ],
+    "version": "96ef37ca-9050-45fd-a191-6e4f944eae89",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "86d291ba-4b34-47c7-ba39-385e7d51b8ae",
+    "bucket_id": "product-images",
+    "name": "products/1768557874429-sexonthebeach.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:34.644Z",
+    "updated_at": "2026-01-16T10:04:34.644Z",
+    "last_accessed_at": "2026-01-16T10:04:34.644Z",
+    "metadata": {
+      "eTag": "\"d8213e5befbcd9ff3e229c967710b24f\"",
+      "size": 9790,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:35.000Z",
+      "contentLength": 9790,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557874429-sexonthebeach.webp"
+    ],
+    "version": "f6f900e8-33a9-4b39-8010-3eacde97e16c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "958975c3-a75c-45fd-a7cc-613109daf848",
+    "bucket_id": "product-images",
+    "name": "products/1768557875078-greengo.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:35.300Z",
+    "updated_at": "2026-01-16T10:04:35.300Z",
+    "last_accessed_at": "2026-01-16T10:04:35.300Z",
+    "metadata": {
+      "eTag": "\"6dcf6505b8ff9355b36177f815aa9b43\"",
+      "size": 4974,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:36.000Z",
+      "contentLength": 4974,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557875078-greengo.webp"
+    ],
+    "version": "9070c807-9ed5-42f6-8449-dd0eaabfa4d1",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "40e3d503-fd57-4485-8572-e8f0b8b307ad",
+    "bucket_id": "product-images",
+    "name": "products/1768558131348-heineken.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:51.616Z",
+    "updated_at": "2026-01-16T10:08:51.616Z",
+    "last_accessed_at": "2026-01-16T10:08:51.616Z",
+    "metadata": {
+      "eTag": "\"3de09bb5dc09cd10effc6f2339a6883d\"",
+      "size": 3820,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:52.000Z",
+      "contentLength": 3820,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558131348-heineken.webp"
+    ],
+    "version": "d4ccc117-8146-44f6-96d8-d904a680783a",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "c32e5d23-d5ca-4ec3-b193-3663a9aafe57",
+    "bucket_id": "product-images",
+    "name": "products/1768557875530-tokyo.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:35.737Z",
+    "updated_at": "2026-01-16T10:04:35.737Z",
+    "last_accessed_at": "2026-01-16T10:04:35.737Z",
+    "metadata": {
+      "eTag": "\"223bd36683eccb87f77749ae515b0e11\"",
+      "size": 15054,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:36.000Z",
+      "contentLength": 15054,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557875530-tokyo.webp"
+    ],
+    "version": "86a9e047-42d3-4173-8d54-c3b11ba1e628",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "077365f1-b1b2-49d8-8a63-5673d64b3def",
+    "bucket_id": "product-images",
+    "name": "products/1768557875848-ironman.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:36.097Z",
+    "updated_at": "2026-01-16T10:04:36.097Z",
+    "last_accessed_at": "2026-01-16T10:04:36.097Z",
+    "metadata": {
+      "eTag": "\"6043e32400ab14599870f6cc288e666d\"",
+      "size": 19350,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:37.000Z",
+      "contentLength": 19350,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557875848-ironman.webp"
+    ],
+    "version": "a08415da-2b64-4686-acf3-35615767388d",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "28f0ccc6-8e5c-4a76-80a0-b2bd367b0e05",
+    "bucket_id": "product-images",
+    "name": "products/1768558131798-heinekenteneke.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:52.008Z",
+    "updated_at": "2026-01-16T10:08:52.008Z",
+    "last_accessed_at": "2026-01-16T10:08:52.008Z",
+    "metadata": {
+      "eTag": "\"1714c2a0c523eb7164e6eea34d8d3274\"",
+      "size": 5106,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:52.000Z",
+      "contentLength": 5106,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558131798-heinekenteneke.webp"
+    ],
+    "version": "3ff8add4-09aa-4d86-b5df-599c48bdde7c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "079f2de8-c866-4d60-b9e3-2dbd92205d7b",
+    "bucket_id": "product-images",
+    "name": "products/1768557876255-ginsoft.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:36.463Z",
+    "updated_at": "2026-01-16T10:04:36.463Z",
+    "last_accessed_at": "2026-01-16T10:04:36.463Z",
+    "metadata": {
+      "eTag": "\"e502d8c6529741cff6567230c4c847ca\"",
+      "size": 15822,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:37.000Z",
+      "contentLength": 15822,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557876255-ginsoft.webp"
+    ],
+    "version": "fb0876ea-311a-4a79-a1bc-240652ec9f6a",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "4794a61f-66ec-4c4d-917e-f9c68793e25d",
+    "bucket_id": "product-images",
+    "name": "campaigns/o2qh4bqus1l-1768573134543.webp",
+    "owner": null,
+    "created_at": "2026-01-16T14:18:55.451Z",
+    "updated_at": "2026-01-16T14:18:55.451Z",
+    "last_accessed_at": "2026-01-16T14:18:55.451Z",
+    "metadata": {
+      "eTag": "\"2cc0f56dad8f655950145bb6306ca551\"",
+      "size": 35928,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T14:18:56.000Z",
+      "contentLength": 35928,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "campaigns",
+      "o2qh4bqus1l-1768573134543.webp"
+    ],
+    "version": "4bf7499c-519e-4bab-b94f-628f139ecf44",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8ab0113a-ebac-449e-84e2-d1e0e45f8413",
+    "bucket_id": "product-images",
+    "name": "products/1768557876548-ginsoft.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:36.775Z",
+    "updated_at": "2026-01-16T10:04:36.775Z",
+    "last_accessed_at": "2026-01-16T10:04:36.775Z",
+    "metadata": {
+      "eTag": "\"e502d8c6529741cff6567230c4c847ca\"",
+      "size": 15822,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:37.000Z",
+      "contentLength": 15822,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557876548-ginsoft.webp"
+    ],
+    "version": "225e9de1-ca46-42de-8686-00dfaf5407bb",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "acd72d5e-61d5-469b-9021-54e1fe5f2919",
+    "bucket_id": "product-images",
+    "name": "products/1768558132130-corona.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:52.382Z",
+    "updated_at": "2026-01-16T10:08:52.382Z",
+    "last_accessed_at": "2026-01-16T10:08:52.382Z",
+    "metadata": {
+      "eTag": "\"57c053f5da1f8708a456608cd5edc7dd\"",
+      "size": 19872,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:53.000Z",
+      "contentLength": 19872,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558132130-corona.webp"
+    ],
+    "version": "e9e77030-75e9-4857-a00e-7a0f1161a310",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8417de70-c88f-4d1a-9451-f022692a66e8",
+    "bucket_id": "product-images",
+    "name": "products/1768557876908-margarita.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:37.122Z",
+    "updated_at": "2026-01-16T10:04:37.122Z",
+    "last_accessed_at": "2026-01-16T10:04:37.122Z",
+    "metadata": {
+      "eTag": "\"018750937b3353e55d9fdaa9f2cf258d\"",
+      "size": 7890,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:38.000Z",
+      "contentLength": 7890,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557876908-margarita.webp"
+    ],
+    "version": "989a3c1a-7029-4111-bf10-1f875ce66505",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "94939628-972d-4d47-9370-f92a2f565a4e",
+    "bucket_id": "product-images",
+    "name": "products/1768557877228-jagerbomb.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:37.472Z",
+    "updated_at": "2026-01-16T10:04:37.472Z",
+    "last_accessed_at": "2026-01-16T10:04:37.472Z",
+    "metadata": {
+      "eTag": "\"50089fc2eb44a086cf3c2a25cbb71d19\"",
+      "size": 13410,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:38.000Z",
+      "contentLength": 13410,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557877228-jagerbomb.webp"
+    ],
+    "version": "96e7784e-fdb7-4af2-828f-6758b9ef9a7c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "6044ef42-e76c-42e1-9ea1-30a2321e30f8",
+    "bucket_id": "product-images",
+    "name": "products/1768558132500-guiness.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:52.709Z",
+    "updated_at": "2026-01-16T10:08:52.709Z",
+    "last_accessed_at": "2026-01-16T10:08:52.709Z",
+    "metadata": {
+      "eTag": "\"d8d46e02afe68ea96fba6097eeb0104e\"",
+      "size": 10100,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:53.000Z",
+      "contentLength": 10100,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558132500-guiness.webp"
+    ],
+    "version": "5168ba67-edec-4a13-8ba6-ac0ab8f636f5",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "fc75f2d5-192e-485b-ba93-607d903d27df",
+    "bucket_id": "product-images",
+    "name": "products/1768557877731-bombay.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:37.965Z",
+    "updated_at": "2026-01-16T10:04:37.965Z",
+    "last_accessed_at": "2026-01-16T10:04:37.965Z",
+    "metadata": {
+      "eTag": "\"a323e37529a77f45c452252eebff4a46\"",
+      "size": 25136,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:38.000Z",
+      "contentLength": 25136,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557877731-bombay.webp"
+    ],
+    "version": "6638c660-6189-40dc-8bb8-fc10a081b606",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8dae002a-af36-4dbf-9f59-f420c661f0ab",
+    "bucket_id": "product-images",
+    "name": "products/1768557878056-absolute.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:38.260Z",
+    "updated_at": "2026-01-16T10:04:38.260Z",
+    "last_accessed_at": "2026-01-16T10:04:38.260Z",
+    "metadata": {
+      "eTag": "\"efa44ba7e910068d806fc3b13304e2e6\"",
+      "size": 14000,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:39.000Z",
+      "contentLength": 14000,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557878056-absolute.webp"
+    ],
+    "version": "49d385a3-2c73-44d4-a96e-a4d4642150fd",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "90048ae0-60df-4159-aa9a-3ee5e0db38ad",
+    "bucket_id": "product-images",
+    "name": "products/1768557878374-honono.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:38.601Z",
+    "updated_at": "2026-01-16T10:04:38.601Z",
+    "last_accessed_at": "2026-01-16T10:04:38.601Z",
+    "metadata": {
+      "eTag": "\"08cb410dff72d8387a23c496fd267792\"",
+      "size": 11766,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:39.000Z",
+      "contentLength": 11766,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557878374-honono.webp"
+    ],
+    "version": "cbaf9471-7ace-4a35-bd6b-e20e9ea4d77c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "90bfe2fc-3ade-4ec7-8228-e36bf45f4013",
+    "bucket_id": "product-images",
+    "name": "products/1768557878694-sourpatch.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:39.207Z",
+    "updated_at": "2026-01-16T10:04:39.207Z",
+    "last_accessed_at": "2026-01-16T10:04:39.207Z",
+    "metadata": {
+      "eTag": "\"30ffd5f5a2c90693c4a2c2cf7521b332\"",
+      "size": 182494,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:40.000Z",
+      "contentLength": 182494,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557878694-sourpatch.webp"
+    ],
+    "version": "5d4bae6d-d3de-41bc-b0a9-7e58b9a4560d",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "7256c25f-58ea-4b96-8da2-3660f286cf3c",
+    "bucket_id": "product-images",
+    "name": "products/1768557879618-beerplate.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:39.834Z",
+    "updated_at": "2026-01-16T10:04:39.834Z",
+    "last_accessed_at": "2026-01-16T10:04:39.834Z",
+    "metadata": {
+      "eTag": "\"f2693fe243ca833f7196926d5fe4e908\"",
+      "size": 30772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:40.000Z",
+      "contentLength": 30772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557879618-beerplate.webp"
+    ],
+    "version": "6265b19d-6058-4602-a21b-4871aec841dd",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "e593552e-d947-4725-af1f-310e825ee1d0",
+    "bucket_id": "product-images",
+    "name": "products/1768557880049-hotdog.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:40.353Z",
+    "updated_at": "2026-01-16T10:04:40.353Z",
+    "last_accessed_at": "2026-01-16T10:04:40.353Z",
+    "metadata": {
+      "eTag": "\"611a0b469624f49e4790a354fa516426\"",
+      "size": 116208,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:41.000Z",
+      "contentLength": 116208,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557880049-hotdog.webp"
+    ],
+    "version": "09e3a362-7131-4877-93d7-d15611f95f58",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8da05991-beeb-4703-87dd-f7a834e6fef7",
+    "bucket_id": "product-images",
+    "name": "products/1768557880486-monster.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:40.767Z",
+    "updated_at": "2026-01-16T10:04:40.767Z",
+    "last_accessed_at": "2026-01-16T10:04:40.767Z",
+    "metadata": {
+      "eTag": "\"78a9d61ff21753a9c24816faacce3ca6\"",
+      "size": 14750,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:41.000Z",
+      "contentLength": 14750,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557880486-monster.webp"
+    ],
+    "version": "4c374f71-e47b-4da1-9e6b-28aef4db07c2",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "04e52510-b16d-4f3a-8995-7f2d13704d0b",
+    "bucket_id": "product-images",
+    "name": "products/1768558132818-amsterdam.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:53.064Z",
+    "updated_at": "2026-01-16T10:08:53.064Z",
+    "last_accessed_at": "2026-01-16T10:08:53.064Z",
+    "metadata": {
+      "eTag": "\"c45afbecc58bea7960a19057ca322350\"",
+      "size": 2944,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:54.000Z",
+      "contentLength": 2944,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558132818-amsterdam.webp"
+    ],
+    "version": "bc6c0436-85d7-436a-90f7-c43fc882db63",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "3382e2b1-df6f-4df5-a85e-124bf58097d9",
+    "bucket_id": "product-images",
+    "name": "products/1768557880957-beef.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:41.197Z",
+    "updated_at": "2026-01-16T10:04:41.197Z",
+    "last_accessed_at": "2026-01-16T10:04:41.197Z",
+    "metadata": {
+      "eTag": "\"e422d60decd8c50ba8c338302aee53bd\"",
+      "size": 16116,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:42.000Z",
+      "contentLength": 16116,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557880957-beef.webp"
+    ],
+    "version": "95e3f5c4-f71e-4b72-b46b-f19e670a17bc",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "57005642-7d02-473d-9a4c-51bfee4ba3f4",
+    "bucket_id": "product-images",
+    "name": "products/1768557881279-chickenbutger.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:41.508Z",
+    "updated_at": "2026-01-16T10:04:41.508Z",
+    "last_accessed_at": "2026-01-16T10:04:41.508Z",
+    "metadata": {
+      "eTag": "\"f97d00a6e668fa9839deb94bfbafcbf2\"",
+      "size": 21284,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:42.000Z",
+      "contentLength": 21284,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557881279-chickenbutger.webp"
+    ],
+    "version": "5657ea1f-7873-440e-8f1d-b05e8e697ad3",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "4edf5dbc-4d74-4ec9-9cf6-2693458cc2b8",
+    "bucket_id": "product-images",
+    "name": "products/1768558133283-tequila.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:53.487Z",
+    "updated_at": "2026-01-16T10:08:53.487Z",
+    "last_accessed_at": "2026-01-16T10:08:53.487Z",
+    "metadata": {
+      "eTag": "\"205ec6ea1097571677d447530ca08a36\"",
+      "size": 16650,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:54.000Z",
+      "contentLength": 16650,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558133283-tequila.webp"
+    ],
+    "version": "be33f434-ff5e-4022-90e8-20d6dcf4ecfb",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "580c2e3f-c072-48c7-bb98-d7ffe83fb851",
+    "bucket_id": "product-images",
+    "name": "products/1768557881616-tiftik.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:41.824Z",
+    "updated_at": "2026-01-16T10:04:41.824Z",
+    "last_accessed_at": "2026-01-16T10:04:41.824Z",
+    "metadata": {
+      "eTag": "\"576ead8eae4ef7c1fe2e3898dc4b9533\"",
+      "size": 12652,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:42.000Z",
+      "contentLength": 12652,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557881616-tiftik.webp"
+    ],
+    "version": "615874de-0aae-4ac8-84cd-9d25492c26ae",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8583a05d-07ad-43ec-9a60-455b3693ef07",
+    "bucket_id": "product-images",
+    "name": "products/1768557881909-chicken.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:42.133Z",
+    "updated_at": "2026-01-16T10:04:42.133Z",
+    "last_accessed_at": "2026-01-16T10:04:42.133Z",
+    "metadata": {
+      "eTag": "\"13f156c47141517474caa911f4ec4370\"",
+      "size": 20352,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:43.000Z",
+      "contentLength": 20352,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557881909-chicken.webp"
+    ],
+    "version": "32881730-ec8a-4593-a376-8103c7b62ac6",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "888d9db9-dd9f-467e-904e-050601d29e49",
+    "bucket_id": "product-images",
+    "name": "products/1768558133594-jager.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:53.810Z",
+    "updated_at": "2026-01-16T10:08:53.810Z",
+    "last_accessed_at": "2026-01-16T10:08:53.810Z",
+    "metadata": {
+      "eTag": "\"460b45f8eb228ab50d13b8664dce2e14\"",
+      "size": 15000,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:54.000Z",
+      "contentLength": 15000,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558133594-jager.webp"
+    ],
+    "version": "a4fb71fe-f3f2-485d-80ab-8c7e2d863242",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "d9401fc0-488b-43a5-a0b1-867b7e34534b",
+    "bucket_id": "product-images",
+    "name": "products/1768557882262-beef2.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:42.523Z",
+    "updated_at": "2026-01-16T10:04:42.523Z",
+    "last_accessed_at": "2026-01-16T10:04:42.523Z",
+    "metadata": {
+      "eTag": "\"a4fa305f73d2c2fe062baf66dff31b4b\"",
+      "size": 14588,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:43.000Z",
+      "contentLength": 14588,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557882262-beef2.webp"
+    ],
+    "version": "176dd11a-d492-4a8f-b4fc-f75eb2385604",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "742323a2-c2e4-4a59-a1c6-86ba66e50690",
+    "bucket_id": "product-images",
+    "name": "products/1768557882616-pizza1.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:42.816Z",
+    "updated_at": "2026-01-16T10:04:42.816Z",
+    "last_accessed_at": "2026-01-16T10:04:42.816Z",
+    "metadata": {
+      "eTag": "\"984c207554dee06ca0e96b346c1608be\"",
+      "size": 13700,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:43.000Z",
+      "contentLength": 13700,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557882616-pizza1.webp"
+    ],
+    "version": "9b3f52f8-29c4-432c-a235-10e6b8787519",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "af3a5235-bc3d-4dff-b10a-99eb4ff0b276",
+    "bucket_id": "product-images",
+    "name": "products/1768557882924-mixednuts.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:44.427Z",
+    "updated_at": "2026-01-16T10:04:44.427Z",
+    "last_accessed_at": "2026-01-16T10:04:44.427Z",
+    "metadata": {
+      "eTag": "\"9eb30654afed99f0ef8600e171a4a492\"",
+      "size": 257272,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:45.000Z",
+      "contentLength": 257272,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557882924-mixednuts.webp"
+    ],
+    "version": "02bcfaf5-d61a-461a-9d06-c47cf205dd6b",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "5fc96a12-b857-405c-8be4-bb28dafd1181",
+    "bucket_id": "product-images",
+    "name": "products/1768557884641-peanuts.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:44.856Z",
+    "updated_at": "2026-01-16T10:04:44.856Z",
+    "last_accessed_at": "2026-01-16T10:04:44.856Z",
+    "metadata": {
+      "eTag": "\"157937377fc09d2a14ab5195b4f1abb0\"",
+      "size": 19564,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:45.000Z",
+      "contentLength": 19564,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557884641-peanuts.webp"
+    ],
+    "version": "7f07a81a-dd82-4b19-b918-fe8323939698",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "0ea6f83e-dd56-45cb-98f5-bdb1bd57ee21",
+    "bucket_id": "product-images",
+    "name": "products/1768557885059-lemonade.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:45.321Z",
+    "updated_at": "2026-01-16T10:04:45.321Z",
+    "last_accessed_at": "2026-01-16T10:04:45.321Z",
+    "metadata": {
+      "eTag": "\"d9916a455114ce4ad3cb20c93fb1e603\"",
+      "size": 19838,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:46.000Z",
+      "contentLength": 19838,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557885059-lemonade.webp"
+    ],
+    "version": "50ea2d18-bc88-4895-a0ba-735545f430bd",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "4d052cc7-072f-466f-ae4f-eff49bb99c10",
+    "bucket_id": "product-images",
+    "name": "products/1768557885439-water.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:45.661Z",
+    "updated_at": "2026-01-16T10:04:45.661Z",
+    "last_accessed_at": "2026-01-16T10:04:45.661Z",
+    "metadata": {
+      "eTag": "\"5ee9fc548b4f6a367cea39bca9271f6a\"",
+      "size": 2824,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:46.000Z",
+      "contentLength": 2824,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557885439-water.webp"
+    ],
+    "version": "e5e631d0-61ca-4ec8-bdf3-2f5141186db1",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ed337c81-7509-4d44-870c-9f28fd4eb07e",
+    "bucket_id": "product-images",
+    "name": "products/1768557885759-cocacola.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:45.972Z",
+    "updated_at": "2026-01-16T10:04:45.972Z",
+    "last_accessed_at": "2026-01-16T10:04:45.972Z",
+    "metadata": {
+      "eTag": "\"9395cd56dd4ab3322f4872a101cc8a7c\"",
+      "size": 10680,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:46.000Z",
+      "contentLength": 10680,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557885759-cocacola.webp"
+    ],
+    "version": "c2e519f3-634c-4ea9-8dd3-ce7e76b93ae6",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "3ac7b6f5-dfeb-4284-ba1f-e0a2f5647add",
+    "bucket_id": "product-images",
+    "name": "products/1768557886075-churchill.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:46.289Z",
+    "updated_at": "2026-01-16T10:04:46.289Z",
+    "last_accessed_at": "2026-01-16T10:04:46.289Z",
+    "metadata": {
+      "eTag": "\"33665cffb67b87792d4b56a3e9dca33d\"",
+      "size": 9874,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:47.000Z",
+      "contentLength": 9874,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557886075-churchill.webp"
+    ],
+    "version": "a3624871-cc6c-4a35-ba25-788b8a79e0e2",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "e6ab1599-21fb-45b6-881e-baee369f1183",
+    "bucket_id": "product-images",
+    "name": "products/1768558133912-blacklabel.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:54.113Z",
+    "updated_at": "2026-01-16T10:08:54.113Z",
+    "last_accessed_at": "2026-01-16T10:08:54.113Z",
+    "metadata": {
+      "eTag": "\"533713879963b0964d55ad2e7148cdf2\"",
+      "size": 5728,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:55.000Z",
+      "contentLength": 5728,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558133912-blacklabel.webp"
+    ],
+    "version": "0cae88d9-cd98-4ab9-8617-818061983bb0",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "161756ed-13ad-43d4-a505-16397acf2197",
+    "bucket_id": "product-images",
+    "name": "products/1768557886395-soda.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:46.597Z",
+    "updated_at": "2026-01-16T10:04:46.597Z",
+    "last_accessed_at": "2026-01-16T10:04:46.597Z",
+    "metadata": {
+      "eTag": "\"836285d411f07925616d7eb639473094\"",
+      "size": 6128,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:47.000Z",
+      "contentLength": 6128,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557886395-soda.webp"
+    ],
+    "version": "e92a9271-6200-44da-9acc-42d2ece1ad89",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "efeb75af-8114-449d-800b-dfe2d8502068",
+    "bucket_id": "product-images",
+    "name": "products/1768557886697-mocktails.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:46.907Z",
+    "updated_at": "2026-01-16T10:04:46.907Z",
+    "last_accessed_at": "2026-01-16T10:04:46.907Z",
+    "metadata": {
+      "eTag": "\"d53c7eda16d81673a7b5b226d30fa910\"",
+      "size": 12680,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:47.000Z",
+      "contentLength": 12680,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557886697-mocktails.webp"
+    ],
+    "version": "61dc7cb6-fc2c-44f8-a8fa-963d739125a8",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "9b3ee039-c983-43ca-9312-40d9270dd32f",
+    "bucket_id": "product-images",
+    "name": "products/1768558134299-jackshot.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:54.498Z",
+    "updated_at": "2026-01-16T10:08:54.498Z",
+    "last_accessed_at": "2026-01-16T10:08:54.498Z",
+    "metadata": {
+      "eTag": "\"85f8a3396b048c6271bb53ba4412c2e9\"",
+      "size": 16848,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:55.000Z",
+      "contentLength": 16848,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558134299-jackshot.webp"
+    ],
+    "version": "ba36caad-5d19-434a-add3-d4781e58b578",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "df863807-3163-484f-892a-8c4ae6affb88",
+    "bucket_id": "product-images",
+    "name": "products/1768557887013-tea.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:47.240Z",
+    "updated_at": "2026-01-16T10:04:47.240Z",
+    "last_accessed_at": "2026-01-16T10:04:47.240Z",
+    "metadata": {
+      "eTag": "\"4ac943bde44720281fa5c87e273e378e\"",
+      "size": 11716,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:48.000Z",
+      "contentLength": 11716,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557887013-tea.webp"
+    ],
+    "version": "6240b302-63b6-4fba-9400-90cd1dc9442b",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ea5a19fd-4985-46fd-a413-0a55fc0857de",
+    "bucket_id": "product-images",
+    "name": "products/1768557887359-juices.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:47.562Z",
+    "updated_at": "2026-01-16T10:04:47.562Z",
+    "last_accessed_at": "2026-01-16T10:04:47.562Z",
+    "metadata": {
+      "eTag": "\"f30a85c0191b3bba8b5d18260c11a5ae\"",
+      "size": 17990,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:48.000Z",
+      "contentLength": 17990,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557887359-juices.webp"
+    ],
+    "version": "b8a2cfe1-4896-4c09-9de8-147475239bef",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "6781ab07-a2c4-45d7-bae0-217e97f2baae",
+    "bucket_id": "product-images",
+    "name": "products/1768558134606-baileys.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:54.805Z",
+    "updated_at": "2026-01-16T10:08:54.805Z",
+    "last_accessed_at": "2026-01-16T10:08:54.805Z",
+    "metadata": {
+      "eTag": "\"3ad7d645449492a1bc72d3d8cc8e0272\"",
+      "size": 5450,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:55.000Z",
+      "contentLength": 5450,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558134606-baileys.webp"
+    ],
+    "version": "a9e32ac2-4caf-4fdc-aa50-fa04305d0724",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8a2b2920-f7b4-4eeb-8d3b-d58112c1922c",
+    "bucket_id": "product-images",
+    "name": "products/1768557887663-italiansoda.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:47.893Z",
+    "updated_at": "2026-01-16T10:04:47.893Z",
+    "last_accessed_at": "2026-01-16T10:04:47.893Z",
+    "metadata": {
+      "eTag": "\"626655607dc2687a82b585b5e89179cf\"",
+      "size": 13450,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:48.000Z",
+      "contentLength": 13450,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557887663-italiansoda.webp"
+    ],
+    "version": "a6467e91-064e-49a3-af61-f5dfe5ab491a",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "cbdf81d4-7032-4327-be4b-6037dd69b8f8",
+    "bucket_id": "product-images",
+    "name": "products/1768557888129-pizzapopular.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:48.342Z",
+    "updated_at": "2026-01-16T10:04:48.342Z",
+    "last_accessed_at": "2026-01-16T10:04:48.342Z",
+    "metadata": {
+      "eTag": "\"2cc0f56dad8f655950145bb6306ca551\"",
+      "size": 35928,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:49.000Z",
+      "contentLength": 35928,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557888129-pizzapopular.webp"
+    ],
+    "version": "812b47e3-14b6-4ba3-b6c4-f47f91872b8d",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "41ba9007-b3f3-4f85-b7c6-42946dc81eeb",
+    "bucket_id": "product-images",
+    "name": "products/1768558134922-zivania.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:55.163Z",
+    "updated_at": "2026-01-16T10:08:55.163Z",
+    "last_accessed_at": "2026-01-16T10:08:55.163Z",
+    "metadata": {
+      "eTag": "\"583389ec87985687e13c1e8548ad277f\"",
+      "size": 16324,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:56.000Z",
+      "contentLength": 16324,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558134922-zivania.webp"
+    ],
+    "version": "f6648dd0-afe4-4785-862b-5501f155e041",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "be3d680b-a3c4-4cd7-b4c7-b7825bab4f3b",
+    "bucket_id": "product-images",
+    "name": "products/1768557888458-barbie.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:48.750Z",
+    "updated_at": "2026-01-16T10:04:48.750Z",
+    "last_accessed_at": "2026-01-16T10:04:48.750Z",
+    "metadata": {
+      "eTag": "\"3e8518761a45375ffcf6ce4dbd15d89a\"",
+      "size": 90622,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:49.000Z",
+      "contentLength": 90622,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557888458-barbie.webp"
+    ],
+    "version": "1744e629-ceba-4d89-856e-d1a889c0c0b6",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "f056a0a0-80ff-4b40-9442-9e13a41deabe",
+    "bucket_id": "product-images",
+    "name": "products/1768557888958-aperol2.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:49.353Z",
+    "updated_at": "2026-01-16T10:04:49.353Z",
+    "last_accessed_at": "2026-01-16T10:04:49.353Z",
+    "metadata": {
+      "eTag": "\"cb9b4c6a14a5c44764eccc76283e5923\"",
+      "size": 191584,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:50.000Z",
+      "contentLength": 191584,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557888958-aperol2.webp"
+    ],
+    "version": "2681af7a-b67f-4c23-a605-a521bed27f92",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ccd7b2e8-f668-49b2-afca-cceab2e3e0b1",
+    "bucket_id": "product-images",
+    "name": "products/1768557889494-midye.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:04:49.853Z",
+    "updated_at": "2026-01-16T10:04:49.853Z",
+    "last_accessed_at": "2026-01-16T10:04:49.853Z",
+    "metadata": {
+      "eTag": "\"9f350b12fa0a11a1bda23abd65df2742\"",
+      "size": 233272,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:04:50.000Z",
+      "contentLength": 233272,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768557889494-midye.webp"
+    ],
+    "version": "c4529953-0207-4a78-82e6-9dd5123bd21e",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "29ef4a42-b36f-48ba-8468-9416d95ec611",
+    "bucket_id": "product-images",
+    "name": "products/1768558135334-5shot.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:55.532Z",
+    "updated_at": "2026-01-16T10:08:55.532Z",
+    "last_accessed_at": "2026-01-16T10:08:55.532Z",
+    "metadata": {
+      "eTag": "\"0fc61b8674d8da027af1abe91b73f20c\"",
+      "size": 17358,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:56.000Z",
+      "contentLength": 17358,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558135334-5shot.webp"
+    ],
+    "version": "0369ffb1-29c9-45d1-8071-07bb3880f033",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "18d7e306-9a56-4663-bd11-9a9ba6da1c63",
+    "bucket_id": "product-images",
+    "name": "products/1768558135665-chivas.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:55.859Z",
+    "updated_at": "2026-01-16T10:08:55.859Z",
+    "last_accessed_at": "2026-01-16T10:08:55.859Z",
+    "metadata": {
+      "eTag": "\"7f7febdef96bb7b4e5a854fc975f5be7\"",
+      "size": 15332,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:56.000Z",
+      "contentLength": 15332,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558135665-chivas.webp"
+    ],
+    "version": "43200f67-6e55-4e22-b596-d752afb75a5c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "fd6eccfe-b662-4ed9-83d1-19dbe6e00992",
+    "bucket_id": "product-images",
+    "name": "products/1768558135957-blacklabel.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:56.155Z",
+    "updated_at": "2026-01-16T10:08:56.155Z",
+    "last_accessed_at": "2026-01-16T10:08:56.155Z",
+    "metadata": {
+      "eTag": "\"533713879963b0964d55ad2e7148cdf2\"",
+      "size": 5728,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:57.000Z",
+      "contentLength": 5728,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558135957-blacklabel.webp"
+    ],
+    "version": "107d91cf-ee33-4917-99ce-19ebf2d9e844",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "869083ec-e341-4c2f-bd7e-5a9cc2c658f6",
+    "bucket_id": "product-images",
+    "name": "products/1768558136266-jackglass.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:56.483Z",
+    "updated_at": "2026-01-16T10:08:56.483Z",
+    "last_accessed_at": "2026-01-16T10:08:56.483Z",
+    "metadata": {
+      "eTag": "\"35d837bde8f70a157fae4f26af651b69\"",
+      "size": 22704,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:57.000Z",
+      "contentLength": 22704,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558136266-jackglass.webp"
+    ],
+    "version": "74e8b230-6638-4a93-a979-d638ed388db4",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "8f79b35a-16f3-454b-83d5-7b77405c59c9",
+    "bucket_id": "product-images",
+    "name": "products/1768558136622-jameson.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:56.828Z",
+    "updated_at": "2026-01-16T10:08:56.828Z",
+    "last_accessed_at": "2026-01-16T10:08:56.828Z",
+    "metadata": {
+      "eTag": "\"d0eab014e69c7121e0adc04b562a009f\"",
+      "size": 13280,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:57.000Z",
+      "contentLength": 13280,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558136622-jameson.webp"
+    ],
+    "version": "d5dc4f0b-d4b5-408d-a2e4-e0c86e44be81",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "dee0d66b-49d7-4dc5-bfbf-4ead4edeae62",
+    "bucket_id": "product-images",
+    "name": "products/1768558136974-jimbean.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:57.205Z",
+    "updated_at": "2026-01-16T10:08:57.205Z",
+    "last_accessed_at": "2026-01-16T10:08:57.205Z",
+    "metadata": {
+      "eTag": "\"d793171d4377a01c4f2b65735930619d\"",
+      "size": 12410,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:58.000Z",
+      "contentLength": 12410,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558136974-jimbean.webp"
+    ],
+    "version": "018b324f-086e-47f4-b82e-8a87171356f5",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "5699a11b-6114-4fe1-a738-02899d7c0ada",
+    "bucket_id": "product-images",
+    "name": "products/1768558137309-fireball.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:57.508Z",
+    "updated_at": "2026-01-16T10:08:57.508Z",
+    "last_accessed_at": "2026-01-16T10:08:57.508Z",
+    "metadata": {
+      "eTag": "\"793bf8ecb5157563706ca836a5177725\"",
+      "size": 5734,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:58.000Z",
+      "contentLength": 5734,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558137309-fireball.webp"
+    ],
+    "version": "d3892837-5f54-4698-9621-7ba730241665",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "4feb4334-47cd-4a45-acf9-c64455d8527f",
+    "bucket_id": "product-images",
+    "name": "products/1768558137616-wniskey.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:57.842Z",
+    "updated_at": "2026-01-16T10:08:57.842Z",
+    "last_accessed_at": "2026-01-16T10:08:57.842Z",
+    "metadata": {
+      "eTag": "\"7ca7d6f4af6f2975770ff09959813292\"",
+      "size": 9036,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:58.000Z",
+      "contentLength": 9036,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558137616-wniskey.webp"
+    ],
+    "version": "88e39eae-fccc-4274-ab29-c5f9ed76e66b",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "309046fd-3be7-4616-95ea-8dbdb93a92b7",
+    "bucket_id": "product-images",
+    "name": "products/1768558137945-barbieglass.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:58.211Z",
+    "updated_at": "2026-01-16T10:08:58.211Z",
+    "last_accessed_at": "2026-01-16T10:08:58.211Z",
+    "metadata": {
+      "eTag": "\"21808ef10f615f4a44ae51bcf3a4d303\"",
+      "size": 11806,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:59.000Z",
+      "contentLength": 11806,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558137945-barbieglass.webp"
+    ],
+    "version": "fd63ca2a-c325-4946-9664-16cc7b8a083c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "3694611e-5216-49a6-a1b4-cc4d779bba1c",
+    "bucket_id": "product-images",
+    "name": "products/1768558138335-jaggerito1.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:58.555Z",
+    "updated_at": "2026-01-16T10:08:58.555Z",
+    "last_accessed_at": "2026-01-16T10:08:58.555Z",
+    "metadata": {
+      "eTag": "\"f0602fb7514323885d7255df97efdb1a\"",
+      "size": 3534,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:59.000Z",
+      "contentLength": 3534,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558138335-jaggerito1.webp"
+    ],
+    "version": "02f367d0-9c60-49c3-a78e-31af7e42cc6f",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "96994c2b-918c-463e-8241-f34a1e8837c1",
+    "bucket_id": "product-images",
+    "name": "products/1768558138787-aperol.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:59.008Z",
+    "updated_at": "2026-01-16T10:08:59.008Z",
+    "last_accessed_at": "2026-01-16T10:08:59.008Z",
+    "metadata": {
+      "eTag": "\"93ef3197314a9385625da846c70a0f0e\"",
+      "size": 15332,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:08:59.000Z",
+      "contentLength": 15332,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558138787-aperol.webp"
+    ],
+    "version": "69327d1f-8acc-4a18-a919-48cfd4b85450",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "62818086-93d9-471c-b329-fa705e085f3e",
+    "bucket_id": "product-images",
+    "name": "products/1768558139106-sunbath.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:59.350Z",
+    "updated_at": "2026-01-16T10:08:59.350Z",
+    "last_accessed_at": "2026-01-16T10:08:59.350Z",
+    "metadata": {
+      "eTag": "\"fd27ef47e61157ba38241fc25541dbaf\"",
+      "size": 9242,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:00.000Z",
+      "contentLength": 9242,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558139106-sunbath.webp"
+    ],
+    "version": "342987ae-d741-432f-8423-074132c64362",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "5becaf4b-b7a0-4f81-b580-de76657df077",
+    "bucket_id": "product-images",
+    "name": "campaigns/pkzvf3388vh-1768573658973.webp",
+    "owner": null,
+    "created_at": "2026-01-16T14:27:39.949Z",
+    "updated_at": "2026-01-16T14:27:39.949Z",
+    "last_accessed_at": "2026-01-16T14:27:39.949Z",
+    "metadata": {
+      "eTag": "\"9f350b12fa0a11a1bda23abd65df2742\"",
+      "size": 233272,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T14:27:40.000Z",
+      "contentLength": 233272,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "campaigns",
+      "pkzvf3388vh-1768573658973.webp"
+    ],
+    "version": "c36367fd-e983-4318-93a2-cc58d256cb3f",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "200f2553-4a4a-4a4c-bd38-6377442c0fb0",
+    "bucket_id": "product-images",
+    "name": "products/1768558139546-sexonthebeach.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:08:59.746Z",
+    "updated_at": "2026-01-16T10:08:59.746Z",
+    "last_accessed_at": "2026-01-16T10:08:59.746Z",
+    "metadata": {
+      "eTag": "\"d8213e5befbcd9ff3e229c967710b24f\"",
+      "size": 9790,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:00.000Z",
+      "contentLength": 9790,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558139546-sexonthebeach.webp"
+    ],
+    "version": "bfc1edcc-e1d0-4f73-b40a-805648347d62",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "878c9ba3-c9e3-4cdc-8ff5-fd8adb9ed831",
+    "bucket_id": "product-images",
+    "name": "products/5lyfypdmqp7-1768575260858.webp",
+    "owner": null,
+    "created_at": "2026-01-16T14:54:21.791Z",
+    "updated_at": "2026-01-16T14:54:21.791Z",
+    "last_accessed_at": "2026-01-16T14:54:21.791Z",
+    "metadata": {
+      "eTag": "\"e502d8c6529741cff6567230c4c847ca\"",
+      "size": 15822,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T14:54:22.000Z",
+      "contentLength": 15822,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "5lyfypdmqp7-1768575260858.webp"
+    ],
+    "version": "62d0d0f2-d19a-435d-b54f-1e395b527c78",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "599736e7-2454-42bc-85d8-14514bc6c9ee",
+    "bucket_id": "product-images",
+    "name": "products/1768558139901-greengo.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:00.110Z",
+    "updated_at": "2026-01-16T10:09:00.110Z",
+    "last_accessed_at": "2026-01-16T10:09:00.110Z",
+    "metadata": {
+      "eTag": "\"6dcf6505b8ff9355b36177f815aa9b43\"",
+      "size": 4974,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:01.000Z",
+      "contentLength": 4974,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558139901-greengo.webp"
+    ],
+    "version": "a27f54b5-8d88-4d48-83a7-84d6bc64c815",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "2dbfe618-6cd8-4aa1-9001-66eb145f6b54",
+    "bucket_id": "product-images",
+    "name": "products/1768558140501-tokyo.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:00.732Z",
+    "updated_at": "2026-01-16T10:09:00.732Z",
+    "last_accessed_at": "2026-01-16T10:09:00.732Z",
+    "metadata": {
+      "eTag": "\"223bd36683eccb87f77749ae515b0e11\"",
+      "size": 15054,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:01.000Z",
+      "contentLength": 15054,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558140501-tokyo.webp"
+    ],
+    "version": "f2b4ac6a-764e-4a63-9eac-c3e7c048320b",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "85e0e43b-61e4-457d-9039-be91525858c3",
+    "bucket_id": "product-images",
+    "name": "products/38u9a8x229q-1768668610660.jpeg",
+    "owner": null,
+    "created_at": "2026-01-17T16:50:21.936Z",
+    "updated_at": "2026-01-17T16:50:21.936Z",
+    "last_accessed_at": "2026-01-17T16:50:21.936Z",
+    "metadata": {
+      "eTag": "\"fcc1df64759587e50aa91ae8e1801e27\"",
+      "size": 2349448,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-17T16:50:22.000Z",
+      "contentLength": 2349448,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "38u9a8x229q-1768668610660.jpeg"
+    ],
+    "version": "53cbcea4-7b46-418c-a441-850c3c1d5169",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "d41b0470-b281-4e49-ab92-6ee8dd970265",
+    "bucket_id": "product-images",
+    "name": "products/1768558140853-ironman.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:01.153Z",
+    "updated_at": "2026-01-16T10:09:01.153Z",
+    "last_accessed_at": "2026-01-16T10:09:01.153Z",
+    "metadata": {
+      "eTag": "\"6043e32400ab14599870f6cc288e666d\"",
+      "size": 19350,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:02.000Z",
+      "contentLength": 19350,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558140853-ironman.webp"
+    ],
+    "version": "90e12733-4fdc-4b05-b1c7-268a3e8724a1",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "e897ddbf-6775-43f8-9b64-6e5d3cf2abc2",
+    "bucket_id": "product-images",
+    "name": "products/1768558141282-ginsoft.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:01.522Z",
+    "updated_at": "2026-01-16T10:09:01.522Z",
+    "last_accessed_at": "2026-01-16T10:09:01.522Z",
+    "metadata": {
+      "eTag": "\"e502d8c6529741cff6567230c4c847ca\"",
+      "size": 15822,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:02.000Z",
+      "contentLength": 15822,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558141282-ginsoft.webp"
+    ],
+    "version": "968c1e77-ff46-474a-af0f-99e30351a672",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "512b3acf-7140-4bdf-aa26-f6185f152e80",
+    "bucket_id": "product-images",
+    "name": "products/1768558141655-ginsoft.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:01.886Z",
+    "updated_at": "2026-01-16T10:09:01.886Z",
+    "last_accessed_at": "2026-01-16T10:09:01.886Z",
+    "metadata": {
+      "eTag": "\"e502d8c6529741cff6567230c4c847ca\"",
+      "size": 15822,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:02.000Z",
+      "contentLength": 15822,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558141655-ginsoft.webp"
+    ],
+    "version": "9729ce98-a12c-4ac0-b188-46b02d3e3237",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "1e78f212-a982-400b-a89e-4937fc0ab271",
+    "bucket_id": "product-images",
+    "name": "products/1768558142185-margarita.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:02.393Z",
+    "updated_at": "2026-01-16T10:09:02.393Z",
+    "last_accessed_at": "2026-01-16T10:09:02.393Z",
+    "metadata": {
+      "eTag": "\"018750937b3353e55d9fdaa9f2cf258d\"",
+      "size": 7890,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:03.000Z",
+      "contentLength": 7890,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558142185-margarita.webp"
+    ],
+    "version": "6fdd54f4-b8ee-4dd1-a315-d98d339916c0",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "49838135-64c2-482d-b9ea-4d64eb497fcc",
+    "bucket_id": "product-images",
+    "name": "products/1768558142495-jagerbomb.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:02.719Z",
+    "updated_at": "2026-01-16T10:09:02.719Z",
+    "last_accessed_at": "2026-01-16T10:09:02.719Z",
+    "metadata": {
+      "eTag": "\"50089fc2eb44a086cf3c2a25cbb71d19\"",
+      "size": 13410,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:03.000Z",
+      "contentLength": 13410,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558142495-jagerbomb.webp"
+    ],
+    "version": "cfcfdf3a-33f7-4281-aada-1d2cbdb670d3",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "33455c7b-b331-44bc-acc3-1428eb010bb5",
+    "bucket_id": "product-images",
+    "name": "products/1768558143029-bombay.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:03.259Z",
+    "updated_at": "2026-01-16T10:09:03.259Z",
+    "last_accessed_at": "2026-01-16T10:09:03.259Z",
+    "metadata": {
+      "eTag": "\"a323e37529a77f45c452252eebff4a46\"",
+      "size": 25136,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:04.000Z",
+      "contentLength": 25136,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558143029-bombay.webp"
+    ],
+    "version": "354dc111-a886-42f7-9d59-39aaa7290e9d",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "a9777b4a-e80e-4cbe-a929-92330dd74172",
+    "bucket_id": "product-images",
+    "name": "products/1768558143395-absolute.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:03.612Z",
+    "updated_at": "2026-01-16T10:09:03.612Z",
+    "last_accessed_at": "2026-01-16T10:09:03.612Z",
+    "metadata": {
+      "eTag": "\"efa44ba7e910068d806fc3b13304e2e6\"",
+      "size": 14000,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:04.000Z",
+      "contentLength": 14000,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558143395-absolute.webp"
+    ],
+    "version": "8d986a84-3738-4fcd-b0f2-944980b237e8",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "41938f73-2e33-4288-ad00-5821200f2eae",
+    "bucket_id": "product-images",
+    "name": "products/1768558143713-honono.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:03.974Z",
+    "updated_at": "2026-01-16T10:09:03.974Z",
+    "last_accessed_at": "2026-01-16T10:09:03.974Z",
+    "metadata": {
+      "eTag": "\"08cb410dff72d8387a23c496fd267792\"",
+      "size": 11766,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:04.000Z",
+      "contentLength": 11766,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558143713-honono.webp"
+    ],
+    "version": "57e860ce-e6a0-4bcc-89b2-28e1ce575b45",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "2cd22650-4543-4ce0-967d-a11e492425fc",
+    "bucket_id": "product-images",
+    "name": "products/1768558144245-sourpatch.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:04.703Z",
+    "updated_at": "2026-01-16T10:09:04.703Z",
+    "last_accessed_at": "2026-01-16T10:09:04.703Z",
+    "metadata": {
+      "eTag": "\"30ffd5f5a2c90693c4a2c2cf7521b332\"",
+      "size": 182494,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:05.000Z",
+      "contentLength": 182494,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558144245-sourpatch.webp"
+    ],
+    "version": "92d15e3b-6f2e-4199-b17c-d9613521afc8",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "79041447-3fa5-4dd9-b535-c86a60f480bb",
+    "bucket_id": "product-images",
+    "name": "products/1768558144880-beerplate.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:05.155Z",
+    "updated_at": "2026-01-16T10:09:05.155Z",
+    "last_accessed_at": "2026-01-16T10:09:05.155Z",
+    "metadata": {
+      "eTag": "\"f2693fe243ca833f7196926d5fe4e908\"",
+      "size": 30772,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:06.000Z",
+      "contentLength": 30772,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558144880-beerplate.webp"
+    ],
+    "version": "5772f1ef-03b8-4ec4-85c1-4f7196cf82af",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "0d184e41-2b10-44ba-89bb-2908a138b6ad",
+    "bucket_id": "product-images",
+    "name": "products/1768558145898-monster.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:06.273Z",
+    "updated_at": "2026-01-16T10:09:06.273Z",
+    "last_accessed_at": "2026-01-16T10:09:06.273Z",
+    "metadata": {
+      "eTag": "\"78a9d61ff21753a9c24816faacce3ca6\"",
+      "size": 14750,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:07.000Z",
+      "contentLength": 14750,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558145898-monster.webp"
+    ],
+    "version": "a999b78b-f31e-49c3-b2c7-ee152d6807be",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "326eb6c3-e700-4544-bb07-6243e8db15c3",
+    "bucket_id": "product-images",
+    "name": "products/ypl9fqpemu-1768583036865.jpg",
+    "owner": null,
+    "created_at": "2026-01-16T17:03:58.111Z",
+    "updated_at": "2026-01-16T17:03:58.111Z",
+    "last_accessed_at": "2026-01-16T17:03:58.111Z",
+    "metadata": {
+      "eTag": "\"c181f73daf88fe1a01da385a68b718f6\"",
+      "size": 31921,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T17:03:59.000Z",
+      "contentLength": 31921,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "ypl9fqpemu-1768583036865.jpg"
+    ],
+    "version": "94720187-1ea9-43c0-ab57-ec50a86e1544",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "117dec86-032d-4624-944b-3d98e80fdea0",
+    "bucket_id": "product-images",
+    "name": "products/f52tuq0s7qn-1768668735698.jpeg",
+    "owner": null,
+    "created_at": "2026-01-17T16:52:31.938Z",
+    "updated_at": "2026-01-17T16:52:31.938Z",
+    "last_accessed_at": "2026-01-17T16:52:31.938Z",
+    "metadata": {
+      "eTag": "\"575c8c5e19647c212eca37a5740ed138\"",
+      "size": 3461319,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-17T16:52:32.000Z",
+      "contentLength": 3461319,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "f52tuq0s7qn-1768668735698.jpeg"
+    ],
+    "version": "e09de0ae-ba0a-4bc2-8e93-4704acb4c26c",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "421d5869-6c3b-40cd-99d1-7bed4c9dfd9b",
+    "bucket_id": "product-images",
+    "name": "products/1768558146706-chickenbutger.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:06.935Z",
+    "updated_at": "2026-01-16T10:09:06.935Z",
+    "last_accessed_at": "2026-01-16T10:09:06.935Z",
+    "metadata": {
+      "eTag": "\"f97d00a6e668fa9839deb94bfbafcbf2\"",
+      "size": 21284,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:07.000Z",
+      "contentLength": 21284,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558146706-chickenbutger.webp"
+    ],
+    "version": "f1d1d2f3-89f8-47f2-8de1-1c893ed8eade",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "3ca93adc-5b4a-409f-b1a1-50e141837eb7",
+    "bucket_id": "product-images",
+    "name": "about/60jwg4m4m78-1768748616218.jpeg",
+    "owner": null,
+    "created_at": "2026-01-18T15:03:58.070Z",
+    "updated_at": "2026-01-18T15:03:58.070Z",
+    "last_accessed_at": "2026-01-18T15:03:58.070Z",
+    "metadata": {
+      "eTag": "\"f7931058ee07627d455f21decdf5dd2d\"",
+      "size": 4815836,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-18T15:03:58.000Z",
+      "contentLength": 4815836,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "about",
+      "60jwg4m4m78-1768748616218.jpeg"
+    ],
+    "version": "630ce6ec-ac33-4aac-b63d-94e37010f1a7",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "d3885295-9cd7-4e17-af05-7272d78de561",
+    "bucket_id": "product-images",
+    "name": "products/1768558147041-tiftik.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:07.253Z",
+    "updated_at": "2026-01-16T10:09:07.253Z",
+    "last_accessed_at": "2026-01-16T10:09:07.253Z",
+    "metadata": {
+      "eTag": "\"576ead8eae4ef7c1fe2e3898dc4b9533\"",
+      "size": 12652,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:08.000Z",
+      "contentLength": 12652,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558147041-tiftik.webp"
+    ],
+    "version": "009aed74-e4f3-4f15-9dac-dc82c49f7126",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "74c823a8-d6a8-4ac2-b764-53b884722f0c",
+    "bucket_id": "product-images",
+    "name": "products/1768558147356-chicken.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:07.580Z",
+    "updated_at": "2026-01-16T10:09:07.580Z",
+    "last_accessed_at": "2026-01-16T10:09:07.580Z",
+    "metadata": {
+      "eTag": "\"13f156c47141517474caa911f4ec4370\"",
+      "size": 20352,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:08.000Z",
+      "contentLength": 20352,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558147356-chicken.webp"
+    ],
+    "version": "50e0c06d-b76b-4b3c-8d88-ab3598ca6eca",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "96877bcd-b6d3-458a-93d0-e83724fea693",
+    "bucket_id": "product-images",
+    "name": "about/ky2a3sufw-1768748784678.jpeg",
+    "owner": null,
+    "created_at": "2026-01-18T15:06:44.804Z",
+    "updated_at": "2026-01-18T15:06:44.804Z",
+    "last_accessed_at": "2026-01-18T15:06:44.804Z",
+    "metadata": {
+      "eTag": "\"1d0576d7a33616eb2db5e7982cef1e62\"",
+      "size": 4484545,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-18T15:06:45.000Z",
+      "contentLength": 4484545,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "about",
+      "ky2a3sufw-1768748784678.jpeg"
+    ],
+    "version": "eb3cb9bd-30c2-4f95-be0b-019e71afe9ce",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "34e00238-da18-417c-9988-070614c2775f",
+    "bucket_id": "product-images",
+    "name": "products/1768558148057-pizza1.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:08.260Z",
+    "updated_at": "2026-01-16T10:09:08.260Z",
+    "last_accessed_at": "2026-01-16T10:09:08.260Z",
+    "metadata": {
+      "eTag": "\"984c207554dee06ca0e96b346c1608be\"",
+      "size": 13700,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:09.000Z",
+      "contentLength": 13700,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558148057-pizza1.webp"
+    ],
+    "version": "323f6ff5-aa4f-4d99-930f-7b55a4974b28",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ab64ff90-fc50-41bb-bbab-085b90d12feb",
+    "bucket_id": "product-images",
+    "name": "about/xtd1ciq3t7a-1768748865692.jpeg",
+    "owner": null,
+    "created_at": "2026-01-18T15:08:05.908Z",
+    "updated_at": "2026-01-18T15:08:05.908Z",
+    "last_accessed_at": "2026-01-18T15:08:05.908Z",
+    "metadata": {
+      "eTag": "\"47f746f93872c24103ed9f46b5df2690\"",
+      "size": 4504909,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-18T15:08:06.000Z",
+      "contentLength": 4504909,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "about",
+      "xtd1ciq3t7a-1768748865692.jpeg"
+    ],
+    "version": "d8d76c39-f547-450a-baab-56241f6ec923",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "10a0ca7a-28fb-41c3-b97b-6f8576a01199",
+    "bucket_id": "product-images",
+    "name": "products/1768558148353-mixednuts.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:09.016Z",
+    "updated_at": "2026-01-16T10:09:09.016Z",
+    "last_accessed_at": "2026-01-16T10:09:09.016Z",
+    "metadata": {
+      "eTag": "\"9eb30654afed99f0ef8600e171a4a492\"",
+      "size": 257272,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:09.000Z",
+      "contentLength": 257272,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558148353-mixednuts.webp"
+    ],
+    "version": "7a80a751-c387-465b-9087-665fbd3a2b87",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "96ad5995-68c1-4a70-be34-9577f76d9bb7",
+    "bucket_id": "product-images",
+    "name": "products/1768558149153-peanuts.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:09.404Z",
+    "updated_at": "2026-01-16T10:09:09.404Z",
+    "last_accessed_at": "2026-01-16T10:09:09.404Z",
+    "metadata": {
+      "eTag": "\"157937377fc09d2a14ab5195b4f1abb0\"",
+      "size": 19564,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:10.000Z",
+      "contentLength": 19564,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558149153-peanuts.webp"
+    ],
+    "version": "a0713521-c306-425d-b39f-cb099e6cfc0a",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "a6deaa61-abcf-49c2-a887-776761100848",
+    "bucket_id": "product-images",
+    "name": "products/1768558149736-lemonade.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:09.956Z",
+    "updated_at": "2026-01-16T10:09:09.956Z",
+    "last_accessed_at": "2026-01-16T10:09:09.956Z",
+    "metadata": {
+      "eTag": "\"d9916a455114ce4ad3cb20c93fb1e603\"",
+      "size": 19838,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:10.000Z",
+      "contentLength": 19838,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558149736-lemonade.webp"
+    ],
+    "version": "690f0458-7d14-4fd3-9ce0-60899762b048",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "3c922f69-e7fd-467c-9fb6-2c2074ea5da7",
+    "bucket_id": "product-images",
+    "name": "products/2dlzj1i95vk-1768575221611.webp",
+    "owner": null,
+    "created_at": "2026-01-16T14:53:42.595Z",
+    "updated_at": "2026-01-16T14:53:42.595Z",
+    "last_accessed_at": "2026-01-16T14:53:42.595Z",
+    "metadata": {
+      "eTag": "\"eab64e1e41785169a05d2639c7942a85\"",
+      "size": 49954,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T14:53:43.000Z",
+      "contentLength": 49954,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "2dlzj1i95vk-1768575221611.webp"
+    ],
+    "version": "183df549-a00b-4cb6-8b05-756d0d28da7f",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "1caa3955-0641-4d48-b83c-79e6e25e1aea",
+    "bucket_id": "product-images",
+    "name": "products/1768558150117-water.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:10.354Z",
+    "updated_at": "2026-01-16T10:09:10.354Z",
+    "last_accessed_at": "2026-01-16T10:09:10.354Z",
+    "metadata": {
+      "eTag": "\"5ee9fc548b4f6a367cea39bca9271f6a\"",
+      "size": 2824,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:11.000Z",
+      "contentLength": 2824,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558150117-water.webp"
+    ],
+    "version": "8ddabd82-3694-472f-85ac-ceb6728fc4e1",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "e8b52c78-aa51-46b6-a555-873907913a2f",
+    "bucket_id": "product-images",
+    "name": "products/1768558150446-cocacola.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:10.664Z",
+    "updated_at": "2026-01-16T10:09:10.664Z",
+    "last_accessed_at": "2026-01-16T10:09:10.664Z",
+    "metadata": {
+      "eTag": "\"9395cd56dd4ab3322f4872a101cc8a7c\"",
+      "size": 10680,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:11.000Z",
+      "contentLength": 10680,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558150446-cocacola.webp"
+    ],
+    "version": "58b8e2bb-96ac-4b56-bc03-acaa555395d8",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "072695d6-d0a7-48f3-8fd1-cb2782009d57",
+    "bucket_id": "product-images",
+    "name": "products/1768558150785-churchill.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:10.998Z",
+    "updated_at": "2026-01-16T10:09:10.998Z",
+    "last_accessed_at": "2026-01-16T10:09:10.998Z",
+    "metadata": {
+      "eTag": "\"33665cffb67b87792d4b56a3e9dca33d\"",
+      "size": 9874,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:11.000Z",
+      "contentLength": 9874,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558150785-churchill.webp"
+    ],
+    "version": "c7255663-97a4-4b13-9fbb-5fd1dcfcdd25",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "bd787d80-96b8-4bc2-9e7c-4fed2dcaf08e",
+    "bucket_id": "product-images",
+    "name": "products/1768558151140-soda.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:11.342Z",
+    "updated_at": "2026-01-16T10:09:11.342Z",
+    "last_accessed_at": "2026-01-16T10:09:11.342Z",
+    "metadata": {
+      "eTag": "\"836285d411f07925616d7eb639473094\"",
+      "size": 6128,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:12.000Z",
+      "contentLength": 6128,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558151140-soda.webp"
+    ],
+    "version": "ad604245-8a5d-46f7-aa69-a39ad9b69a8d",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "a0d768cf-1048-4c63-9d67-b2635fd42725",
+    "bucket_id": "product-images",
+    "name": "campaigns/3fts8nhr6qa-1768679930395.png",
+    "owner": null,
+    "created_at": "2026-01-17T19:58:56.107Z",
+    "updated_at": "2026-01-17T19:58:56.107Z",
+    "last_accessed_at": "2026-01-17T19:58:56.107Z",
+    "metadata": {
+      "eTag": "\"83a9f6616b9ad8bb82028d34a188a061\"",
+      "size": 1117278,
+      "mimetype": "image/png",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-17T19:58:57.000Z",
+      "contentLength": 1117278,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "campaigns",
+      "3fts8nhr6qa-1768679930395.png"
+    ],
+    "version": "9a6bb1a0-e5b9-44fa-ad88-898185d33373",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "ca544b0d-3c01-499c-aa88-711048d04d8f",
+    "bucket_id": "product-images",
+    "name": "products/1768558151528-mocktails.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:11.853Z",
+    "updated_at": "2026-01-16T10:09:11.853Z",
+    "last_accessed_at": "2026-01-16T10:09:11.853Z",
+    "metadata": {
+      "eTag": "\"d53c7eda16d81673a7b5b226d30fa910\"",
+      "size": 12680,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:12.000Z",
+      "contentLength": 12680,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558151528-mocktails.webp"
+    ],
+    "version": "72330339-c22d-4a79-a528-22c13ddbde66",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "4fec1b6e-7655-490d-b6d1-95fb3e3dae56",
+    "bucket_id": "product-images",
+    "name": "products/1768558152024-tea.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:12.320Z",
+    "updated_at": "2026-01-16T10:09:12.320Z",
+    "last_accessed_at": "2026-01-16T10:09:12.320Z",
+    "metadata": {
+      "eTag": "\"4ac943bde44720281fa5c87e273e378e\"",
+      "size": 11716,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:13.000Z",
+      "contentLength": 11716,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558152024-tea.webp"
+    ],
+    "version": "f8c69e62-f668-494a-8f14-ef74613abfba",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "5b1eff67-3b9f-49eb-8f6e-71592301b4ce",
+    "bucket_id": "product-images",
+    "name": "products/g2k0a4i7urc-1774891619354.jpeg",
+    "owner": null,
+    "created_at": "2026-03-30T17:27:01.510Z",
+    "updated_at": "2026-03-30T17:27:01.510Z",
+    "last_accessed_at": "2026-03-30T17:27:01.510Z",
+    "metadata": {
+      "eTag": "\"8db5e66ad6a3d76658a96d6d1c9f6bfc\"",
+      "size": 211838,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-03-30T17:27:02.000Z",
+      "contentLength": 211838,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "g2k0a4i7urc-1774891619354.jpeg"
+    ],
+    "version": "df1c824c-367a-4609-9d81-404745c3073e",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "051d1ab6-2ca9-46aa-867b-8f8d86b98d6a",
+    "bucket_id": "product-images",
+    "name": "products/1768558152486-juices.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:12.702Z",
+    "updated_at": "2026-01-16T10:09:12.702Z",
+    "last_accessed_at": "2026-01-16T10:09:12.702Z",
+    "metadata": {
+      "eTag": "\"f30a85c0191b3bba8b5d18260c11a5ae\"",
+      "size": 17990,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:13.000Z",
+      "contentLength": 17990,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558152486-juices.webp"
+    ],
+    "version": "0d184021-ae39-4efd-aae8-45b292830eb9",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "166153d2-fc15-4dea-86b3-b011fd06ed5b",
+    "bucket_id": "product-images",
+    "name": "products/1768558152811-italiansoda.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:13.015Z",
+    "updated_at": "2026-01-16T10:09:13.015Z",
+    "last_accessed_at": "2026-01-16T10:09:13.015Z",
+    "metadata": {
+      "eTag": "\"626655607dc2687a82b585b5e89179cf\"",
+      "size": 13450,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:13.000Z",
+      "contentLength": 13450,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558152811-italiansoda.webp"
+    ],
+    "version": "5fba00dd-3677-45eb-9e5d-28097380f3e1",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "06b538e7-89f4-42aa-8502-911c2f829245",
+    "bucket_id": "product-images",
+    "name": "products/jws4jtsbe6m-1774891680871.png",
+    "owner": null,
+    "created_at": "2026-03-30T17:28:07.351Z",
+    "updated_at": "2026-03-30T17:28:07.351Z",
+    "last_accessed_at": "2026-03-30T17:28:07.351Z",
+    "metadata": {
+      "eTag": "\"94906bc195f14879155051f8cd6bb0d9\"",
+      "size": 1347869,
+      "mimetype": "image/png",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-03-30T17:28:08.000Z",
+      "contentLength": 1347869,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "jws4jtsbe6m-1774891680871.png"
+    ],
+    "version": "4641f2f3-fbcf-467a-9323-95cb696ab765",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "3c7fac4a-a9ee-4db0-bdfc-4ef17c0ee25a",
+    "bucket_id": "product-images",
+    "name": "products/1768558153979-midye.webp",
+    "owner": null,
+    "created_at": "2026-01-16T10:09:14.356Z",
+    "updated_at": "2026-01-16T10:09:14.356Z",
+    "last_accessed_at": "2026-01-16T10:09:14.356Z",
+    "metadata": {
+      "eTag": "\"9f350b12fa0a11a1bda23abd65df2742\"",
+      "size": 233272,
+      "mimetype": "image/webp",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-01-16T10:09:15.000Z",
+      "contentLength": 233272,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "products",
+      "1768558153979-midye.webp"
+    ],
+    "version": "4b026c24-8eed-4505-85d8-2d86d91f9d39",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "03862f56-15d2-4f3b-b48a-1f5e1c50d7f4",
+    "bucket_id": "product-images",
+    "name": "campaigns/xqdeob2ctc-1774891913766.jpeg",
+    "owner": null,
+    "created_at": "2026-03-30T17:31:55.966Z",
+    "updated_at": "2026-03-30T17:31:55.966Z",
+    "last_accessed_at": "2026-03-30T17:31:55.966Z",
+    "metadata": {
+      "eTag": "\"8579a209b91bdc868c853332ee930743\"",
+      "size": 330931,
+      "mimetype": "image/jpeg",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-03-30T17:31:56.000Z",
+      "contentLength": 330931,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "campaigns",
+      "xqdeob2ctc-1774891913766.jpeg"
+    ],
+    "version": "7d68bc02-9df9-404a-b516-979a5c816b66",
+    "owner_id": null,
+    "user_metadata": {}
+  },
+  {
+    "id": "f32b453b-2148-4e16-b23b-67b2c987978d",
+    "bucket_id": "product-images",
+    "name": "campaigns/azgjk5p4bj8-1774891951746.png",
+    "owner": null,
+    "created_at": "2026-03-30T17:32:36.077Z",
+    "updated_at": "2026-03-30T17:32:36.077Z",
+    "last_accessed_at": "2026-03-30T17:32:36.077Z",
+    "metadata": {
+      "eTag": "\"b46fd9fda05a83fa76019a3812c7e0c0\"",
+      "size": 937580,
+      "mimetype": "image/png",
+      "cacheControl": "max-age=3600",
+      "lastModified": "2026-03-30T17:32:37.000Z",
+      "contentLength": 937580,
+      "httpStatusCode": 200
+    },
+    "path_tokens": [
+      "campaigns",
+      "azgjk5p4bj8-1774891951746.png"
+    ],
+    "version": "518e2c7f-76ac-4f76-b99a-dc3346fbc286",
+    "owner_id": null,
+    "user_metadata": {}
+  }
+]

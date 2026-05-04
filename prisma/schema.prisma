@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model categories {
+  id            String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name          String
+  description   String?
+  display_order Int?       @default(0)
+  created_at    DateTime?  @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime?  @default(now()) @db.Timestamptz(6)
+  products      products[]
+}
+
+model products {
+  id                  String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  category_id         String?         @db.Uuid
+  name                String
+  description         String?
+  price               Decimal         @db.Decimal(10, 2)
+  original_price      Decimal?        @db.Decimal(10, 2)
+  discount_percentage Int?            @default(0)
+  image_url           String?
+  is_popular          Boolean?        @default(false)
+  display_order       Int?            @default(0)
+  is_active           Boolean?        @default(true)
+  created_at          DateTime?       @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime?       @default(now()) @db.Timestamptz(6)
+  categories          categories?     @relation(fields: [category_id], references: [id], onDelete: Cascade)
+  popular_items       popular_items[]
+}
+
+model popular_items {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  product_id    String?   @db.Uuid
+  display_order Int?      @default(0)
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+  products      products? @relation(fields: [product_id], references: [id], onDelete: Cascade)
+}
+
+model activities {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title         String
+  description   String?
+  day_type      String
+  specific_day  String?
+  time_slot     String?
+  image_url     String?
+  is_active     Boolean?  @default(true)
+  display_order Int?      @default(0)
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model admin_users {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  username      String    @unique
+  password_hash String
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model about_images {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  image_url     String
+  display_order Int
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model campaigns_images {
+  id                  String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title               String
+  description         String?
+  image_url           String
+  price               Decimal   @db.Decimal(10, 2)
+  original_price      Decimal?  @db.Decimal(10, 2)
+  discount_percentage Int?      @default(0)
+  display_order       Int
+  created_at          DateTime? @default(now()) @db.Timestamptz(6)
+}
