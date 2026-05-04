@@ -74,7 +74,7 @@ export type CampaignImage = {
 const serialize = (obj: any): any => {
   if (obj === null || obj === undefined) return obj
   if (obj instanceof Date) return obj.toISOString()
-  if (typeof obj === 'object' && obj.constructor?.name === 'Decimal') return Number(obj)
+  if (typeof obj === 'object' && obj !== null && typeof obj.toNumber === 'function') return obj.toNumber()
   if (Array.isArray(obj)) return obj.map(serialize)
   if (typeof obj === 'object') {
     const newObj: any = {}
