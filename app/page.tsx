@@ -24,8 +24,8 @@ export default async function Home() {
       <Header />
       <main>
         <Campaigns campaigns={campaigns} />
-        <MenuCategories categories={categories} />
         <WheelOfFortune products={products} />
+        <MenuCategories categories={categories} />
         <About images={aboutImages} />
       </main>
       <Footer />
