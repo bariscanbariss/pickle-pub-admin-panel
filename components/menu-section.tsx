@@ -5,25 +5,25 @@ import Image from "next/image"
 import { getCategories, getActiveProducts, type Category, type Product } from "@/lib/supabase"
 import { Skeleton } from "@/components/ui/skeleton"
 
-export function MenuSection() {
+interface MenuSectionProps {
+  initialCategoryId?: string | null
+}
+
+export function MenuSection({ initialCategoryId = null }: MenuSectionProps = {}) {
   const [categories, setCategories] = useState<Category[]>([])
   const [products, setProducts] = useState<any[]>([])
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(initialCategoryId)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     loadData()
-
-    const handleCategorySelect = (e: CustomEvent) => {
-      setSelectedCategory(e.detail.categoryId)
-    }
-
-    window.addEventListener("picklepub:category", handleCategorySelect as EventListener)
-    
-    return () => {
-      window.removeEventListener("picklepub:category", handleCategorySelect as EventListener)
-    }
   }, [])
+
+  useEffect(() => {
+    if (initialCategoryId !== undefined) {
+      setSelectedCategory(initialCategoryId)
+    }
+  }, [initialCategoryId])
 
   const loadData = async () => {
     try {

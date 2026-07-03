@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { type Category } from "@/lib/supabase"
 
 interface MenuCategoriesProps {
@@ -27,19 +28,19 @@ export function MenuCategories({ categories }: MenuCategoriesProps) {
   const matched = categories
     .map((cat) => {
       const map = matchCategory(cat.name)
-      return map ? { src: map.src, dbId: cat.id } : null
+      return map ? { src: map.src, dbId: cat.id, slug: map.id } : null
     })
-    .filter(Boolean) as Array<{ src: string; dbId: string }>
+    .filter(Boolean) as Array<{ src: string; dbId: string; slug: string }>
 
   const displayItems =
     matched.length > 0
       ? matched
-      : CATEGORY_MAP.map((m) => ({ src: m.src, dbId: m.id }))
+      : CATEGORY_MAP.map((m) => ({ src: m.src, dbId: m.id, slug: m.id }))
 
-  const handleClick = (id: string) => {
-    window.dispatchEvent(new CustomEvent("picklepub:category", { detail: { categoryId: id } }))
-    const el = document.getElementById("menu")
-    if (el) el.scrollIntoView({ behavior: "smooth" })
+  const router = useRouter()
+
+  const handleClick = (slug: string) => {
+    router.push(`/${slug}`)
   }
 
   return (
@@ -61,7 +62,7 @@ export function MenuCategories({ categories }: MenuCategoriesProps) {
                 className={isRight ? "mt-8 md:mt-14" : ""}
               >
                 <button
-                  onClick={() => handleClick(item.dbId)}
+                  onClick={() => handleClick(item.slug)}
                   className="group focus:outline-none w-full"
                   aria-label="Kategoriye git"
                 >
