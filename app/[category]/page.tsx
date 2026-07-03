@@ -35,9 +35,10 @@ function findDbCategory(slug: string, categories: any[]) {
 export default async function CategoryPage({
   params,
 }: {
-  params: { category: string }
+  params: Promise<{ category: string }>
 }) {
-  const slug = params.category
+  // Next.js 15+ params bir Promise — await edilmesi gerekiyor
+  const { category: slug } = await params
 
   // Geçersiz slug → 404
   const mapEntry = CATEGORY_MAP.find((m) => m.slug === slug)
