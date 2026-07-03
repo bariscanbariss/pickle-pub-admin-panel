@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_PASSWORD: 99e3337ba0cf80d266a68ba0d6ebaea6
       POSTGRES_DB: picklepub
     ports:
       - "5432:5432"
