@@ -20,6 +20,7 @@ const CATEGORY_MAP = [
   { keywords: ["shot", "shots"], slug: "shots", title: "Shotlar" },
   { keywords: ["coffee", "kahve", "kahveler", "coffe", "coffes", "coffees"], slug: "coffees", title: "Kahveler" },
   { keywords: ["wine", "şarap", "şaraplar"], slug: "wine", title: "Şaraplar" },
+  { keywords: ["snack", "snacks", "cips", "çerez", "atıştırmalık"], slug: "snacks", title: "Atıştırmalıklar" },
 ]
 
 // Admin panelinde eklenen kategorileri slug ile eşleştir

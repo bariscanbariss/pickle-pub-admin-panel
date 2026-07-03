@@ -13,6 +13,7 @@ const categories = [
   { name: 'Soft Drinks',  description: 'Alkolsüz içecekler',                 display_order: 6 },
   { name: 'Foods',        description: 'Yemek ve atıştırmalıklar',           display_order: 7 },
   { name: 'Coffees',      description: 'Sıcak ve soğuk kahve çeşitleri',    display_order: 8 },
+  { name: 'Snacks',       description: 'Atıştırmalıklar ve çerezler',        display_order: 9 },
 ]
 
 // ─── ÜRÜNLER ──────────────────────────────────────────────────────────────────
@@ -35,10 +36,11 @@ const products = [
   ['Beers', 'Pickle 30cl',        230],
   ['Beers', 'Hellboy',            300],
   ['Beers', 'Mexican Fake 50 Cl', 250],
-  // Atıştırmalıklar biralar ile birlikte
-  ['Beers', 'Fıstık',             100],
-  ['Beers', 'Ruffles',            100],
-  ['Beers', 'Karışık Çerez',      140],
+
+  // ── SNACKS ──
+  ['Snacks', 'Fıstık',             100],
+  ['Snacks', 'Ruffles',            100],
+  ['Snacks', 'Karışık Çerez',      140],
 
   // ── COCKTAILS ──
   ['Cocktails', 'Barbie',              350],

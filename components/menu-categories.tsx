@@ -17,6 +17,7 @@ const CATEGORY_MAP = [
   { keywords: ["shot", "shots"], src: "/categories/shots.png", id: "shots" },
   { keywords: ["coffee", "kahve", "kahveler", "coffe", "coffes", "coffees"], src: "/categories/coffes.png", id: "coffees" },
   { keywords: ["wine", "şarap", "şaraplar"], src: "/categories/wine.png", id: "wine" },
+  { keywords: ["snack", "snacks", "cips", "çerez", "atıştırmalık"], src: "/categories/snacks.png", id: "snacks" },
 ]
 
 function matchCategory(name: string) {
