@@ -1,14 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
+import { PrismaClient } from '@prisma/client'
+import bcrypt from 'bcryptjs'
+
+const prisma = new PrismaClient()
+
 
 export async function POST(request: NextRequest) {
   try {
-    const { password } = await request.json()
+    const { username, password } = await request.json()
 
-    // Basit şifre kontrolü (production'da daha güvenli olmalı)
-    const correctPassword = process.env.ADMIN_PASSWORD || 'pickle2024'
+    if (!username || !password) {
+      return NextResponse.json({ error: 'Kullanıcı adı ve şifre zorunludur' }, { status: 400 })
+    }
 
-    if (password === correctPassword) {
+    const adminUser = await prisma.admin_users.findUnique({
+      where: { username }
+    })
+
+    if (!adminUser) {
+      return NextResponse.json({ error: 'Hatalı kullanıcı adı veya şifre' }, { status: 401 })
+    }
+
+    const passwordMatch = await bcrypt.compare(password, adminUser.password_hash)
+
+    if (passwordMatch) {
       // Cookie oluştur
       const cookieStore = await cookies()
       cookieStore.set('admin-auth', 'authenticated', {
@@ -20,15 +36,11 @@ export async function POST(request: NextRequest) {
 
       return NextResponse.json({ success: true })
     } else {
-      return NextResponse.json(
-        { error: 'Hatalı şifre' },
-        { status: 401 }
-      )
+      return NextResponse.json({ error: 'Hatalı kullanıcı adı veya şifre' }, { status: 401 })
     }
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Bir hata oluştu' },
-      { status: 500 }
-    )
+    console.error('Login error:', error)
+    return NextResponse.json({ error: 'Bir hata oluştu' }, { status: 500 })
   }
 }
+

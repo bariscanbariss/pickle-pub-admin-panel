@@ -373,16 +373,18 @@ export const deleteCampaignImage = async (id: string) => {
   await prisma.campaigns_images.delete({ where: { id } })
 }
 
-// Cloudinary konfigürasyonu
-import { v2 as cloudinary } from 'cloudinary';
+// Cloudflare R2 (S3) Dosya Yükleme
+import { S3Client, PutObjectCommand, DeleteObjectCommand } from '@aws-sdk/client-s3';
 
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET
+const r2Client = new S3Client({
+  region: "auto",
+  endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+  credentials: {
+    accessKeyId: process.env.R2_ACCESS_KEY_ID || '',
+    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
+  },
 });
 
-// Image Upload using Cloudinary (Server Action)
 export const uploadImage = async (formDataOrFile: FormData | File, folder: string = 'products') => {
   try {
     let file: File;
@@ -397,18 +399,24 @@ export const uploadImage = async (formDataOrFile: FormData | File, folder: strin
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Buffer'ı Base64'e çevir
-    const base64String = buffer.toString('base64');
-    const dataURI = `data:${file.type};base64,${base64String}`;
+    // Benzersiz bir dosya adı oluştur
+    const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`;
+    const originalName = file.name.replace(/[^a-zA-Z0-9.]/g, '_'); // Güvenli dosya adı
+    const filename = `${folder}/${uniqueSuffix}-${originalName}`;
+    
+    // R2'ye yükle
+    await r2Client.send(new PutObjectCommand({
+      Bucket: process.env.R2_BUCKET_NAME,
+      Key: filename,
+      Body: buffer,
+      ContentType: file.type,
+    }));
 
-    // Cloudinary'ye yükle
-    const result = await cloudinary.uploader.upload(dataURI, {
-      folder: `pickle-pub/${folder}`,
-    });
-
-    return result.secure_url;
+    // URL'i döndür (Public URL üzerinden erişim için)
+    const publicUrl = process.env.NEXT_PUBLIC_R2_PUBLIC_URL;
+    return `${publicUrl}/${filename}`;
   } catch (error) {
-    console.error("Cloudinary upload error:", error);
+    console.error("R2 upload error:", error);
     throw error;
   }
 }
@@ -417,23 +425,20 @@ export const deleteImage = async (imageUrl: string) => {
   try {
     if (!imageUrl) return;
     
-    // Eğer Cloudinary resmiyse oradan sil
-    if (imageUrl.includes('cloudinary.com')) {
-      const urlParts = imageUrl.split('/');
-      const filenameWithExt = urlParts[urlParts.length - 1];
-      const filename = filenameWithExt.split('.')[0];
+    const publicUrl = process.env.NEXT_PUBLIC_R2_PUBLIC_URL;
+    
+    // Eğer R2 URL'i ise sil
+    if (publicUrl && imageUrl.startsWith(publicUrl)) {
+      // URL'den dosya anahtarını (key) çıkar
+      const key = imageUrl.replace(`${publicUrl}/`, '');
       
-      // upload/... sonrasındaki klasör yolunu bul
-      const uploadIndex = urlParts.findIndex(p => p === 'upload');
-      if (uploadIndex !== -1) {
-        // v1234543... gibi version numarasını atla (uploadIndex + 2'den başla)
-        const folderPath = urlParts.slice(uploadIndex + 2, -1).join('/');
-        const publicId = folderPath ? `${folderPath}/${filename}` : filename;
-        await cloudinary.uploader.destroy(publicId);
-      }
+      await r2Client.send(new DeleteObjectCommand({
+        Bucket: process.env.R2_BUCKET_NAME,
+        Key: key,
+      }));
+      console.log("R2'den dosya silindi:", key);
     } else if (imageUrl.startsWith('/uploads/')) {
-      // Lokal/eski dosya. Vercel üzerinde readonly olduğu için silinemez, es geçiyoruz.
-      console.log("Eski lokal dosya bağlantısı kopartıldı:", imageUrl);
+      console.log("Eski lokal dosya atlandı:", imageUrl);
     }
   } catch (error) {
     console.error("Delete error:", error);

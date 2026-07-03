@@ -1,80 +1,88 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const links = [
+    { href: "#campaigns", label: "Kampanyalar" },
+    { href: "#menu-categories", label: "Menü" },
+    { href: "#about", label: "Hakkımızda" },
+  ]
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/picklepublogo.png"
-              alt="Pickle Pub"
-              width={150}
-              height={50}
-              className="h-12 w-auto"
-              priority
-            />
-          </div>
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border"
+          : "bg-white/80 backdrop-blur-sm"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-16 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/picklepublogo.png"
+            alt="Pickle Pub"
+            width={160}
+            height={52}
+            className="h-10 w-auto object-contain"
+            priority
+          />
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#menu" className="text-sm font-medium hover:text-primary transition-colors">
-              Menü
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
             </a>
-            <a href="#populars" className="text-sm font-medium hover:text-primary transition-colors">
-              Kampanyalar
-            </a>
-            <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-              Hakkımızda
-            </a>
-            <Button variant="default" className="bg-primary hover:bg-primary/90">
-              İletişim
-            </Button>
-          </nav>
+          ))}
+          <a href="#campaigns" className="btn-primary text-sm py-2 px-4">
+            Rezervasyon
+          </a>
+        </nav>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden pt-4 pb-2 flex flex-col gap-4">
-            <a
-              href="#menu"
-              className="text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Menü
-            </a>
-            <a
-              href="#populars"
-              className="text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Kampanyalar
-            </a>
-            <a
-              href="#about"
-              className="text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Hakkımızda
-            </a>
-            <Button variant="default" className="bg-primary hover:bg-primary/90 w-full">
-              İletişim
-            </Button>
-          </nav>
-        )}
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Menüyü aç/kapat"
+        >
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
+
+      {/* Mobile nav */}
+      {isMenuOpen && (
+        <nav className="md:hidden bg-white border-t border-border px-4 py-4 flex flex-col gap-4 shadow-md">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-base font-medium text-foreground hover:text-accent transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      )}
     </header>
   )
 }
