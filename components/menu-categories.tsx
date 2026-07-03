@@ -11,11 +11,11 @@ interface MenuCategoriesProps {
 const CATEGORY_MAP = [
   { keywords: ["cocktail", "kokteyl", "kokteyller"], src: "/categories/cocktails.png", id: "cocktails" },
   { keywords: ["beer", "bira", "biralar"], src: "/categories/beers.png", id: "beers" },
-  { keywords: ["soft", "alkolsüz", "meşrubat"], src: "/categories/softdrinks.png", id: "soft-drinks" },
+  { keywords: ["soft", "alkolsüz", "meşrubat", "soft drinks"], src: "/categories/softdrinks.png", id: "soft-drinks" },
   { keywords: ["food", "yiyecek", "yemek", "atıştırmalık"], src: "/categories/foods.png", id: "foods" },
-  { keywords: ["whiskey", "viski", "viskiler"], src: "/categories/whiskeys.png", id: "whiskeys" },
+  { keywords: ["whiskey", "viski", "viskiler", "whiskeys"], src: "/categories/whiskeys.png", id: "whiskeys" },
   { keywords: ["shot", "shots"], src: "/categories/shots.png", id: "shots" },
-  { keywords: ["coffee", "kahve", "kahveler", "coffe", "coffes"], src: "/categories/coffes.png", id: "coffees" },
+  { keywords: ["coffee", "kahve", "kahveler", "coffe", "coffes", "coffees"], src: "/categories/coffes.png", id: "coffees" },
   { keywords: ["wine", "şarap", "şaraplar"], src: "/categories/wine.png", id: "wine" },
 ]
 
