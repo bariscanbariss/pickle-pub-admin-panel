@@ -4,8 +4,8 @@ const bcrypt = require('bcryptjs')
 const prisma = new PrismaClient()
 
 async function main() {
-  const adminUsername = 'admin'
-  const adminPassword = 'password' // Change this later in production
+  const adminUsername = process.env.ADMIN_USERNAME || 'admin'
+  const adminPassword = process.env.ADMIN_PASSWORD || 'password' 
   const salt = await bcrypt.genSalt(10)
   const passwordHash = await bcrypt.hash(adminPassword, salt)
 
@@ -21,7 +21,7 @@ async function main() {
         password_hash: passwordHash,
       }
     })
-    console.log('✅ Admin kullanıcısı oluşturuldu (Kullanıcı adı: admin, Şifre: password)')
+    console.log(`✅ Admin kullanıcısı oluşturuldu (Kullanıcı adı: ${adminUsername}, Şifre: ${adminPassword})`)
   } else {
     console.log('ℹ️ Admin kullanıcısı zaten mevcut.')
   }
