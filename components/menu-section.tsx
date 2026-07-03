@@ -13,6 +13,16 @@ export function MenuSection() {
 
   useEffect(() => {
     loadData()
+
+    const handleCategorySelect = (e: CustomEvent) => {
+      setSelectedCategory(e.detail.categoryId)
+    }
+
+    window.addEventListener("picklepub:category", handleCategorySelect as EventListener)
+    
+    return () => {
+      window.removeEventListener("picklepub:category", handleCategorySelect as EventListener)
+    }
   }, [])
 
   const loadData = async () => {
