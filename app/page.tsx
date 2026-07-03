@@ -9,7 +9,6 @@ import { WheelOfFortune } from "@/components/wheel-of-fortune"
 import { About } from "@/components/about"
 import { Footer } from "@/components/footer"
 import { FloatingButtons } from "@/components/floating-buttons"
-import { MenuSection } from "@/components/menu-section"
 
 export default async function Home() {
   const [campaigns, aboutImages, categories, products] = await Promise.all([
@@ -26,7 +25,6 @@ export default async function Home() {
       <main>
         <Campaigns campaigns={campaigns} />
         <MenuCategories categories={categories} />
-        <MenuSection />
         <WheelOfFortune products={products} />
         <About images={aboutImages} />
       </main>
