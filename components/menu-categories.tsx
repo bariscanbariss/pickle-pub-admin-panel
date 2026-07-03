@@ -8,10 +8,14 @@ interface MenuCategoriesProps {
 }
 
 const CATEGORY_MAP = [
-  { keywords: ["cocktail", "kokteyl"], src: "/categories/cocktails.png", id: "cocktails" },
-  { keywords: ["beer", "bira"], src: "/categories/beers.png", id: "beers" },
+  { keywords: ["cocktail", "kokteyl", "kokteyller"], src: "/categories/cocktails.png", id: "cocktails" },
+  { keywords: ["beer", "bira", "biralar"], src: "/categories/beers.png", id: "beers" },
   { keywords: ["soft", "alkolsüz", "meşrubat"], src: "/categories/softdrinks.png", id: "softdrinks" },
-  { keywords: ["food", "yiyecek", "yemek"], src: "/categories/foods.png", id: "foods" },
+  { keywords: ["food", "yiyecek", "yemek", "atıştırmalık"], src: "/categories/foods.png", id: "foods" },
+  { keywords: ["whiskey", "viski", "viskiler"], src: "/categories/whiskeys.png", id: "whiskeys" },
+  { keywords: ["shot", "shots"], src: "/categories/shots.png", id: "shots" },
+  { keywords: ["coffee", "kahve", "kahveler", "coffe", "coffes"], src: "/categories/coffes.png", id: "coffes" },
+  { keywords: ["wine", "şarap", "şaraplar"], src: "/categories/wine.png", id: "wine" },
 ]
 
 function matchCategory(name: string) {
