@@ -53,9 +53,7 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <a href="#campaigns" className="btn-primary text-sm py-2 px-4">
-            Rezervasyon
-          </a>
+
         </nav>
 
         {/* Mobile hamburger */}
