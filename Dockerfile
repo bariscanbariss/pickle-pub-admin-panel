@@ -41,6 +41,10 @@ COPY --from=builder /app/node_modules/.bin/prisma ./node_modules/.bin/prisma
 COPY --from=builder /app/node_modules/pg ./node_modules/pg
 COPY --from=builder /app/node_modules/bcryptjs ./node_modules/bcryptjs
 
+# Eski Supabase yedeğinden veri geri yüklemek için (bkz: scripts/restore-backup.js)
+COPY --from=builder /app/scripts ./scripts
+COPY --from=builder /app/supabase_backup ./supabase_backup
+
 RUN chown -R nextjs:nodejs /app
 USER nextjs
 
