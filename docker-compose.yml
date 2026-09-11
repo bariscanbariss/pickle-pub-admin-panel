@@ -1,18 +1,70 @@
-version: '3.8'
-
 services:
+  # ─── PostgreSQL ───────────────────────────────────────
   db:
     image: postgres:15-alpine
     container_name: picklepub_db
-    restart: always
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 99e3337ba0cf80d266a68ba0d6ebaea6
-      POSTGRES_DB: picklepub
-    ports:
-      - "5432:5432"
+      POSTGRES_USER: ${DB_USER:-picklepub}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME:-picklepub}
+    # VPS'te dışarıya açmıyoruz - sadece iç ağ
+    expose:
+      - "5432"
     volumes:
       - picklepub_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-picklepub} -d ${DB_NAME:-picklepub}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - picklepub_net
+
+  # ─── Next.js App ──────────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: picklepub_app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-picklepub}:${DB_PASSWORD}@db:5432/${DB_NAME:-picklepub}?schema=public
+      DIRECT_URL: postgresql://${DB_USER:-picklepub}:${DB_PASSWORD}@db:5432/${DB_NAME:-picklepub}?schema=public
+      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+      NEXT_PUBLIC_R2_PUBLIC_URL: ${NEXT_PUBLIC_R2_PUBLIC_URL}
+      R2_ACCOUNT_ID: ${R2_ACCOUNT_ID}
+      R2_ACCESS_KEY_ID: ${R2_ACCESS_KEY_ID}
+      R2_SECRET_ACCESS_KEY: ${R2_SECRET_ACCESS_KEY}
+      R2_BUCKET_NAME: ${R2_BUCKET_NAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      NODE_ENV: production
+    # Sadece localhost'a bağla — Nginx erişebilir, internetten erişilemez
+    ports:
+      - "127.0.0.1:3001:3000"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - picklepub_net
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  picklepub_net:
+    driver: bridge
 
 volumes:
   picklepub_db_data:
+    name: picklepub_db_data
