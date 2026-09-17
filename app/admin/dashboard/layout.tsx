@@ -4,12 +4,13 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { LayoutDashboard, Package, Tags, Star, Calendar, ImageIcon, LogOut } from 'lucide-react'
+import { LayoutDashboard, Package, Tags, Layers, Star, Calendar, ImageIcon, LogOut } from 'lucide-react'
 import { useState } from 'react'
 
 const navigation = [
   { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
   { name: 'Kategoriler', href: '/admin/dashboard/categories', icon: Tags },
+  { name: 'Alt Kategoriler', href: '/admin/dashboard/subcategories', icon: Layers },
   { name: 'Kampanyalar', href: '/admin/dashboard/campaigns', icon: Star },
   { name: 'Menü Ürünleri', href: '/admin/dashboard/products', icon: Package },
   { name: 'Aktiviteler', href: '/admin/dashboard/activities', icon: Calendar },

@@ -1,121 +1,103 @@
 # Pickle Pub - Admin Panel 🍺
 
-Pickle Pub'ın menü ve içerik yönetim sistemi. Supabase ile desteklenen, modern ve kullanıcı dostu bir admin paneli.
+Pickle Pub'ın menü ve içerik yönetim sistemi. Next.js + Prisma + PostgreSQL ile çalışan, modern ve kullanıcı dostu bir admin paneli.
 
 ## 🚀 Özellikler
 
 ### Admin Paneli
-- ✅ Şifre korumalı admin girişi
-- ✅ Kategori yönetimi (CRUD işlemleri)
+- ✅ Şifre korumalı admin girişi (bcrypt ile hash'lenmiş, `admin_users` tablosunda saklanır)
+- ✅ Kategori ve alt kategori yönetimi (CRUD işlemleri)
 - ✅ Menü ürünleri yönetimi
-  - Resim yükleme
+  - Açıklama
   - Fiyat belirleme
   - İndirim yönetimi (% olarak)
   - Aktif/Pasif durumu
-- ✅ Popüler ürünler yönetimi
-  - Ana sayfada slider olarak gösterilir
-  - Sürükle-bırak sıralama
+- ✅ Kampanya görselleri yönetimi
 - ✅ Aktivite yönetimi
   - Hafta içi/sonu aktiviteleri
   - Özel gün seçimi
   - Saat aralığı belirleme
+- ✅ Hakkımızda görselleri yönetimi
 
 ### Kullanıcı Arayüzü
 - 🎨 Modern ve responsive tasarım
-- 🌓 Dark/Light mode desteği
 - 📱 Mobil uyumlu
 - ⚡ Hızlı yükleme
-- 🎭 Otomatik slider (popüler ürünler)
+- 🎭 Otomatik slider (kampanyalar)
 
 ## 📋 Gereksinimler
 
-- Node.js 18+
-- Supabase hesabı
-- npm veya pnpm
+- Node.js 22+
+- pnpm
+- PostgreSQL (yerelde Docker Compose ile, üzerinde ayrıca kendi sunucunuz da olabilir)
+- Cloudflare R2 (ürün/görsel depolama için)
 
 ## 🛠️ Kurulum
 
 ### 1. Bağımlılıkları Yükleyin
 
 ```bash
-npm install
-# veya
 pnpm install
 ```
 
-### 2. Supabase Projesini Ayarlayın
+### 2. Environment Değişkenlerini Ayarlayın
 
-1. [Supabase](https://supabase.com) üzerinde yeni bir proje oluşturun
-2. SQL Editor'de `supabase-schema.sql` dosyasını çalıştırın
-3. Storage > Buckets bölümünden `product-images` bucket'ının public olarak ayarlandığından emin olun
+`.env.example` dosyasını `.env` olarak kopyalayın ve değerleri girin:
 
-### 3. Environment Değişkenlerini Ayarlayın
-
-`.env.local` dosyasını oluşturun ve şu değişkenleri ekleyin:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your-project-url.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-ADMIN_PASSWORD=your-secure-password
+```bash
+cp .env.example .env
 ```
 
-**Not:** Supabase URL ve API Key'i Supabase Dashboard > Settings > API bölümünden alabilirsiniz.
+Gerekli değişkenler: veritabanı bağlantısı (`DATABASE_URL`, `DIRECT_URL`) ve Cloudflare R2 bilgileri (`R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET_NAME`, `NEXT_PUBLIC_R2_PUBLIC_URL`).
+
+### 3. Veritabanını Hazırlayın
+
+```bash
+npx prisma migrate deploy
+```
+
+Admin kullanıcısı oluşturmak için `scripts/restore-backup.js` içindeki adımları veya doğrudan `admin_users` tablosuna bcrypt hash'lenmiş bir şifre eklemeyi kullanabilirsiniz.
 
 ### 4. Geliştirme Sunucusunu Başlatın
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
+
+### Docker ile Çalıştırma
+
+Production ortamı için `docker-compose.yml` PostgreSQL ve Next.js uygulamasını birlikte ayağa kaldırır; container başlarken `prisma migrate deploy` otomatik çalışır:
+
+```bash
+docker compose up -d --build
+```
 
 ## 📱 Kullanım
 
 ### Admin Paneline Giriş
 
 1. `/admin` adresine gidin
-2. `.env.local` dosyasında belirlediğiniz şifreyi girin
-3. Dashboard'a erişin
+2. `admin_users` tablosundaki kullanıcı adı/şifre ile giriş yapın
 
-### Kategori Ekleme
+### Kategori ve Alt Kategori Ekleme
 
-1. Admin Panel > Kategoriler
-2. "Yeni Kategori" butonuna tıklayın
-3. Kategori adı ve açıklamasını girin
-4. Kaydedin
+1. Admin Panel > Kategoriler — üst kategoriler
+2. Admin Panel > Alt Kategoriler — bir kategoriye bağlı alt gruplar (örn. Kokteyller altında Votka Bazlı, Cin Bazlı)
 
 ### Ürün Ekleme
 
 1. Admin Panel > Menü Ürünleri
 2. "Yeni Ürün" butonuna tıklayın
-3. Ürün bilgilerini doldurun:
-   - Ad
-   - Açıklama
-   - Kategori
-   - Fiyat
-   - Eski fiyat (isteğe bağlı - indirim göstermek için)
-   - İndirim yüzdesi
-   - Resim yükleyin
-4. "Aktif" olarak işaretleyin
-5. Kaydedin
-
-### Popüler Ürün Ekleme
-
-1. Admin Panel > Popüler Ürünler
-2. "Ürün Ekle" butonuna tıklayın
-3. Listeden bir ürün seçin
-4. Ana sayfada slider olarak görünecek
+3. Ürün bilgilerini doldurun: ad, açıklama, kategori, alt kategori (varsa), fiyat, eski fiyat (isteğe bağlı), indirim yüzdesi
+4. "Aktif" olarak işaretleyin ve kaydedin
 
 ### Aktivite Ekleme
 
 1. Admin Panel > Aktiviteler
 2. "Yeni Aktivite" butonuna tıklayın
-3. Aktivite bilgilerini girin:
-   - Başlık
-   - Açıklama
-   - Gün tipi (Her gün / Hafta içi / Hafta sonu)
-   - Özel gün (isteğe bağlı)
-   - Saat aralığı
+3. Başlık, açıklama, gün tipi, özel gün ve saat aralığını girin
 4. Kaydedin
 
 ## 🗂️ Proje Yapısı
@@ -123,45 +105,51 @@ Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
 ```
 pickle-pub-admin-panel/
 ├── app/
+│   ├── [category]/                # Müşteriye açık kategori/menü sayfası
 │   ├── admin/
 │   │   ├── dashboard/
-│   │   │   ├── categories/      # Kategori yönetimi
-│   │   │   ├── products/         # Ürün yönetimi
-│   │   │   ├── popular/          # Popüler ürünler
-│   │   │   ├── activities/       # Aktivite yönetimi
-│   │   │   ├── layout.tsx        # Admin panel layout
-│   │   │   └── page.tsx          # Dashboard ana sayfa
-│   │   └── page.tsx              # Admin login
+│   │   │   ├── categories/        # Kategori yönetimi
+│   │   │   ├── subcategories/     # Alt kategori yönetimi
+│   │   │   ├── products/          # Ürün yönetimi
+│   │   │   ├── campaigns/         # Kampanya görselleri
+│   │   │   ├── activities/        # Aktivite yönetimi
+│   │   │   ├── about-images/      # Hakkımızda görselleri
+│   │   │   ├── layout.tsx         # Admin panel layout
+│   │   │   └── page.tsx           # Dashboard ana sayfa
+│   │   └── page.tsx               # Admin login
 │   ├── api/
 │   │   └── admin/
-│   │       ├── login/            # Login API
-│   │       └── logout/           # Logout API
+│   │       ├── login/             # Login API
+│   │       └── logout/            # Logout API
 │   ├── layout.tsx
-│   └── page.tsx                  # Ana sayfa
+│   └── page.tsx                   # Ana sayfa
 ├── components/
-│   ├── ui/                       # Shadcn UI componentleri
+│   ├── ui/                        # Shadcn UI componentleri
 │   ├── header.tsx
 │   ├── hero.tsx
-│   ├── popular-items.tsx         # Popüler ürünler slider
+│   ├── menu-categories.tsx
 │   ├── about.tsx
 │   └── footer.tsx
 ├── lib/
-│   ├── supabase.ts               # Supabase client ve helper fonksiyonlar
+│   ├── supabase.ts                # Prisma tabanlı server actions (isim tarihsel)
+│   ├── prisma.ts                  # Prisma client
 │   └── utils.ts
-├── middleware.ts                 # Auth middleware
-├── supabase-schema.sql           # Veritabanı şeması
-└── .env.local                    # Environment değişkenleri
+├── prisma/
+│   ├── schema.prisma               # Veritabanı şeması
+│   └── migrations/                 # SQL migration geçmişi
+├── middleware.ts                   # Auth middleware
+├── docker-compose.yml               # PostgreSQL + Next.js (production)
+└── .env.example                     # Environment değişkenleri şablonu
 ```
 
 ## 🔒 Güvenlik
 
 - Admin paneli middleware ile korunmaktadır
 - Şifre cookie tabanlı authentication kullanır
-- Supabase Row Level Security (RLS) aktiftir
-- Public read, authenticated write politikaları uygulanmıştır
+- Admin şifreleri `admin_users` tablosunda bcrypt ile hash'lenmiş olarak saklanır
 
 **⚠️ Production Önerileri:**
-- `ADMIN_PASSWORD` için güçlü bir şifre kullanın
+- Güçlü admin şifreleri kullanın
 - HTTPS kullanın
 - Environment değişkenlerini asla commit etmeyin
 - Daha güvenli bir authentication sistemi düşünün (örn: NextAuth.js)
@@ -172,8 +160,8 @@ pickle-pub-admin-panel/
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **UI Components:** Shadcn UI + Radix UI
-- **Database:** Supabase (PostgreSQL)
-- **Storage:** Supabase Storage
+- **Database:** PostgreSQL (Prisma ORM)
+- **Storage:** Cloudflare R2
 - **State Management:** React Hooks
 - **Forms:** React Hook Form
 - **Notifications:** Sonner

@@ -3,9 +3,8 @@ export const dynamic = "force-dynamic"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FloatingButtons } from "@/components/floating-buttons"
-import { getCategories, getActiveProducts } from "@/lib/supabase"
+import { getCategories, getActiveProducts, getSubcategories, type Product, type Subcategory } from "@/lib/supabase"
 import { notFound } from "next/navigation"
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
@@ -33,6 +32,81 @@ function findDbCategory(slug: string, categories: any[]) {
   }) || null
 }
 
+// 250.00 → "250" · 149.50 → "149,50" — klasik menülerde gereksiz sıfır gösterilmez
+function formatPrice(value: number) {
+  const isWhole = Number.isInteger(value)
+  return isWhole
+    ? value.toString()
+    : value.toFixed(2).replace(".", ",")
+}
+
+function MenuRow({ product }: { product: Product }) {
+  return (
+    <li className="py-5 first:pt-0">
+      <div className="flex items-baseline gap-3">
+        <span className="font-medium text-foreground text-[1.05rem] leading-snug">
+          {product.name}
+        </span>
+        <span
+          aria-hidden
+          className="flex-1 border-b border-dotted border-border translate-y-[-0.3em]"
+        />
+        <span className="flex items-baseline gap-2 whitespace-nowrap">
+          {product.original_price && Number(product.original_price) > Number(product.price) && (
+            <span className="text-sm text-muted-foreground line-through">
+              ₺{formatPrice(Number(product.original_price))}
+            </span>
+          )}
+          <span className="text-accent font-semibold tabular-nums">
+            ₺{formatPrice(Number(product.price))}
+          </span>
+          {product.has_double && product.double_price != null && (
+            <span className="text-xs text-muted-foreground tabular-nums">
+              (Duble ₺{formatPrice(Number(product.double_price))})
+            </span>
+          )}
+        </span>
+      </div>
+
+      <div className="flex items-start justify-between gap-3 mt-1">
+        {product.description ? (
+          <p className="text-sm text-muted-foreground italic max-w-md leading-relaxed">
+            {product.description}
+          </p>
+        ) : (
+          <span />
+        )}
+        {!!product.discount_percentage && product.discount_percentage > 0 && (
+          <span className="text-xs font-medium text-accent whitespace-nowrap">
+            %{product.discount_percentage} indirim
+          </span>
+        )}
+      </div>
+    </li>
+  )
+}
+
+function MenuGroup({ heading, products }: { heading?: string; products: Product[] }) {
+  if (products.length === 0) return null
+  return (
+    <div className="mb-10 last:mb-0">
+      {heading && (
+        <div className="flex items-center gap-4 mb-2">
+          <h3 className="italic text-accent text-lg shrink-0" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>
+            {heading}
+          </h3>
+          <span className="flex-1 border-t border-border" />
+        </div>
+      )}
+      <ul className="divide-y divide-border/70">
+        {products.map((product) => (
+          <MenuRow key={product.id} product={product} />
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 export default async function CategoryPage({
   params,
 }: {
@@ -51,13 +125,26 @@ export default async function CategoryPage({
   const categories = await getCategories().catch(() => [])
   const dbCategory = findDbCategory(slug, categories)
 
-  // DB'de kategori varsa o kategoriye göre ürün çek, yoksa boş
-  const products = dbCategory
-    ? await getActiveProducts(dbCategory.id).catch(() => [])
-    : []
+  // DB'de kategori varsa o kategoriye göre ürün ve alt kategorileri çek, yoksa boş
+  const [products, subcategories] = dbCategory
+    ? await Promise.all([
+        getActiveProducts(dbCategory.id).catch(() => [] as Product[]),
+        getSubcategories(dbCategory.id).catch(() => [] as Subcategory[]),
+      ])
+    : [[] as Product[], [] as Subcategory[]]
 
   const categoryTitle = dbCategory?.name ?? mapEntry.title
   const categoryDesc = dbCategory?.description ?? "Özenle seçilmiş lezzetli ürünlerimizi keşfedin"
+
+  // Ürünleri alt kategoriye göre grupla (alt kategorisi olmayan ürünler "Diğer" grubuna düşer)
+  const groupedBySubcategory = subcategories.map((sub) => ({
+    id: sub.id,
+    name: sub.name,
+    items: products.filter((p) => p.subcategory_id === sub.id),
+  })).filter((group) => group.items.length > 0)
+
+  const ungrouped = products.filter((p) => !p.subcategory_id)
+  const hasSubcategoryGroups = groupedBySubcategory.length > 0
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -66,7 +153,7 @@ export default async function CategoryPage({
       <main className="flex-1">
         {/* Sayfa Başlık Bölümü */}
         <section className="section-padding pb-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             {/* Geri dön */}
             <Link
               href="/#menu-categories"
@@ -84,9 +171,9 @@ export default async function CategoryPage({
           </div>
         </section>
 
-        {/* Ürün Grid */}
-        <section className="px-4 md:px-8 lg:px-16 pb-16">
-          <div className="max-w-7xl mx-auto">
+        {/* Ürün Listesi */}
+        <section className="px-4 md:px-8 lg:px-16 pb-20">
+          <div className="max-w-3xl mx-auto">
             {products.length === 0 ? (
               <div className="text-center py-24">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-muted flex items-center justify-center">
@@ -97,64 +184,17 @@ export default async function CategoryPage({
                   Admin panelinden bu kategoriye ürün ekleyebilirsiniz.
                 </p>
               </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {products.map((product: any) => (
-                  <div
-                    key={product.id}
-                    className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                  >
-                    {/* Ürün Görseli */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                      {product.image_url ? (
-                        <Image
-                          src={product.image_url}
-                          alt={product.name}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
-                          Görsel Yok
-                        </div>
-                      )}
-
-                      {/* İndirim Rozeti */}
-                      {product.discount_percentage > 0 && (
-                        <div className="absolute top-3 right-3 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                          %{product.discount_percentage} İndirim
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Ürün Bilgisi */}
-                    <div className="p-4">
-                      <h3 className="font-bold text-lg mb-1 line-clamp-1 group-hover:text-accent transition-colors">
-                        {product.name}
-                      </h3>
-
-                      {product.description && (
-                        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
-                          {product.description}
-                        </p>
-                      )}
-
-                      {/* Fiyat */}
-                      <div className="flex items-center gap-2 mt-2">
-                        <span className="text-xl font-bold text-accent">
-                          ₺{Number(product.price).toFixed(2)}
-                        </span>
-                        {product.original_price &&
-                          Number(product.original_price) > Number(product.price) && (
-                            <span className="text-sm text-muted-foreground line-through">
-                              ₺{Number(product.original_price).toFixed(2)}
-                            </span>
-                          )}
-                      </div>
-                    </div>
-                  </div>
+            ) : hasSubcategoryGroups ? (
+              <>
+                {groupedBySubcategory.map((group) => (
+                  <MenuGroup key={group.id} heading={group.name} products={group.items} />
                 ))}
-              </div>
+                {ungrouped.length > 0 && (
+                  <MenuGroup heading="Diğer" products={ungrouped} />
+                )}
+              </>
+            ) : (
+              <MenuGroup products={products} />
             )}
           </div>
         </section>

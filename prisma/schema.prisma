@@ -9,18 +9,31 @@ datasource db {
 }
 
 model categories {
-  id            String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  id            String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name          String
   description   String?
+  display_order Int?            @default(0)
+  created_at    DateTime?       @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime?       @default(now()) @db.Timestamptz(6)
+  products      products[]
+  subcategories subcategories[]
+}
+
+model subcategories {
+  id            String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  category_id   String     @db.Uuid
+  name          String
   display_order Int?       @default(0)
   created_at    DateTime?  @default(now()) @db.Timestamptz(6)
   updated_at    DateTime?  @default(now()) @db.Timestamptz(6)
+  categories    categories @relation(fields: [category_id], references: [id], onDelete: Cascade)
   products      products[]
 }
 
 model products {
   id                  String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   category_id         String?         @db.Uuid
+  subcategory_id      String?         @db.Uuid
   name                String
   description         String?
   price               Decimal         @db.Decimal(10, 2)
@@ -28,11 +41,14 @@ model products {
   discount_percentage Int?            @default(0)
   image_url           String?
   is_popular          Boolean?        @default(false)
+  has_double          Boolean?        @default(false)
+  double_price        Decimal?        @db.Decimal(10, 2)
   display_order       Int?            @default(0)
   is_active           Boolean?        @default(true)
   created_at          DateTime?       @default(now()) @db.Timestamptz(6)
   updated_at          DateTime?       @default(now()) @db.Timestamptz(6)
   categories          categories?     @relation(fields: [category_id], references: [id], onDelete: Cascade)
+  subcategories       subcategories?  @relation(fields: [subcategory_id], references: [id], onDelete: SetNull)
   popular_items       popular_items[]
 }
 

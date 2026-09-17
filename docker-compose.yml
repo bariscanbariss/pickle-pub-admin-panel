@@ -34,9 +34,6 @@ services:
     environment:
       DATABASE_URL: postgresql://${DB_USER:-picklepub}:${DB_PASSWORD}@db:5432/${DB_NAME:-picklepub}?schema=public
       DIRECT_URL: postgresql://${DB_USER:-picklepub}:${DB_PASSWORD}@db:5432/${DB_NAME:-picklepub}?schema=public
-      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
-      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
       NEXT_PUBLIC_R2_PUBLIC_URL: ${NEXT_PUBLIC_R2_PUBLIC_URL}
       R2_ACCOUNT_ID: ${R2_ACCOUNT_ID}
       R2_ACCESS_KEY_ID: ${R2_ACCESS_KEY_ID}

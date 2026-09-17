@@ -1,33 +1,30 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Plus, Pencil, Trash2, Upload, X, Tag } from 'lucide-react'
+import { Plus, Pencil, Trash2, Tag } from 'lucide-react'
 import {
   getCategories,
   getProducts,
+  getSubcategories,
   createProduct,
   updateProduct,
   deleteProduct,
-  uploadImage,
-  deleteImage,
   type Category,
+  type Subcategory,
   type Product
 } from '@/lib/supabase'
 import { toast } from 'sonner'
-import Image from 'next/image'
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<any[]>([])
   const [categories, setCategories] = useState<Category[]>([])
+  const [subcategories, setSubcategories] = useState<Subcategory[]>([])
   const [loading, setLoading] = useState(true)
   const [editingId, setEditingId] = useState<string | null>(null)
   const [showForm, setShowForm] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
-  const [imageFile, setImageFile] = useState<File | null>(null)
-  const [imagePreview, setImagePreview] = useState<string | null>(null)
-  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [bulkEditMode, setBulkEditMode] = useState(false)
   const [priceEdits, setPriceEdits] = useState<Record<string, {price: string, original_price: string, discount_percentage: string}>>({})
@@ -39,9 +36,23 @@ export default function ProductsPage() {
     original_price: '',
     discount_percentage: '0',
     category_id: '',
-    image_url: '',
+    subcategory_id: '',
+    has_double: false,
+    double_price: '',
     is_active: true
   })
+
+  const formSubcategories = subcategories.filter((s) => s.category_id === formData.category_id)
+
+  // Duble seçeneği sadece kokteyl ve viski kategorilerinde anlamlı
+  const DOUBLE_ELIGIBLE_KEYWORDS = ['cocktail', 'kokteyl', 'whiskey', 'viski']
+  const isDoubleEligibleCategory = (categoryId: string) => {
+    const category = categories.find((c) => c.id === categoryId)
+    if (!category) return false
+    const lower = category.name.toLowerCase()
+    return DOUBLE_ELIGIBLE_KEYWORDS.some((kw) => lower.includes(kw))
+  }
+  const showDoubleOption = isDoubleEligibleCategory(formData.category_id)
 
   // Toplu fiyat düzenleme fonksiyonları
   const handleBulkPriceChange = (id: string, field: string, value: string, product: any) => {
@@ -92,11 +103,13 @@ export default function ProductsPage() {
 
   const loadData = async () => {
     try {
-      const [categoriesData, productsData] = await Promise.all([
+      const [categoriesData, subcategoriesData, productsData] = await Promise.all([
         getCategories(),
+        getSubcategories(),
         getProducts()
       ])
       setCategories(categoriesData)
+      setSubcategories(subcategoriesData)
       setProducts(productsData)
     } catch (error) {
       toast.error('Veriler yüklenirken hata oluştu')
@@ -106,39 +119,11 @@ export default function ProductsPage() {
     }
   }
 
-  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (file) {
-      setImageFile(file)
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string)
-      }
-      reader.readAsDataURL(file)
-    }
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
 
     try {
-      let imageUrl = formData.image_url
-
-      // Yeni resim yüklendiyse
-      if (imageFile) {
-        imageUrl = await uploadImage(imageFile, 'products')
-
-        // Eski resmi sil (düzenleme modundaysa)
-        if (editingId && formData.image_url) {
-          try {
-            await deleteImage(formData.image_url)
-          } catch (err) {
-            console.log('Eski resim silinirken hata:', err)
-          }
-        }
-      }
-
       const productData = {
         name: formData.name,
         description: formData.description,
@@ -146,7 +131,11 @@ export default function ProductsPage() {
         original_price: formData.original_price ? parseFloat(formData.original_price) : null,
         discount_percentage: parseInt(formData.discount_percentage),
         category_id: formData.category_id || null,
-        image_url: imageUrl,
+        subcategory_id: formData.subcategory_id || null,
+        has_double: showDoubleOption && formData.has_double,
+        double_price: showDoubleOption && formData.has_double && formData.double_price
+          ? parseFloat(formData.double_price)
+          : null,
         is_active: formData.is_active
       }
 
@@ -176,10 +165,11 @@ export default function ProductsPage() {
       original_price: product.original_price?.toString() || '',
       discount_percentage: product.discount_percentage.toString(),
       category_id: product.category_id || '',
-      image_url: product.image_url || '',
+      subcategory_id: product.subcategory_id || '',
+      has_double: product.has_double || false,
+      double_price: product.double_price?.toString() || '',
       is_active: product.is_active
     })
-    setImagePreview(product.image_url)
     setEditingId(product.id)
     setShowForm(true)
 
@@ -189,26 +179,12 @@ export default function ProductsPage() {
     }, 100)
   }
 
-  const handleDelete = async (id: string, imageUrl: string) => {
+  const handleDelete = async (id: string) => {
     if (!confirm('Bu ürünü silmek istediğinizden emin misiniz?')) return
 
     setLoading(true)
     try {
-      console.log('Deleting product:', id)
       await deleteProduct(id)
-      console.log('Product deleted successfully')
-
-      // Resmi de sil
-      if (imageUrl) {
-        try {
-          console.log('Deleting image:', imageUrl)
-          await deleteImage(imageUrl)
-          console.log('Image deleted successfully')
-        } catch (err) {
-          console.log('Resim silinirken hata:', err)
-        }
-      }
-
       toast.success('Ürün silindi')
       await loadData()
     } catch (error) {
@@ -228,13 +204,13 @@ export default function ProductsPage() {
       original_price: '',
       discount_percentage: '0',
       category_id: '',
-      image_url: '',
+      subcategory_id: '',
+      has_double: false,
+      double_price: '',
       is_active: true
     })
     setEditingId(null)
     setShowForm(false)
-    setImageFile(null)
-    setImagePreview(null)
   }
 
   const filteredProducts = selectedCategory === 'all'
@@ -327,7 +303,7 @@ export default function ProductsPage() {
                   <label className="text-sm font-medium">Kategori</label>
                   <select
                     value={formData.category_id}
-                    onChange={(e) => setFormData({ ...formData, category_id: e.target.value })}
+                    onChange={(e) => setFormData({ ...formData, category_id: e.target.value, subcategory_id: '' })}
                     className="w-full px-4 py-2 rounded-lg border border-input bg-background"
                   >
                     <option value="">Kategori Seçin</option>
@@ -338,6 +314,24 @@ export default function ProductsPage() {
                     ))}
                   </select>
                 </div>
+
+                {formSubcategories.length > 0 && (
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Alt Kategori</label>
+                    <select
+                      value={formData.subcategory_id}
+                      onChange={(e) => setFormData({ ...formData, subcategory_id: e.target.value })}
+                      className="w-full px-4 py-2 rounded-lg border border-input bg-background"
+                    >
+                      <option value="">Alt Kategori Yok</option>
+                      {formSubcategories.map((sub) => (
+                        <option key={sub.id} value={sub.id}>
+                          {sub.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -390,52 +384,37 @@ export default function ProductsPage() {
                 </div>
               </div>
 
-              {/* Resim Upload */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Ürün Resmi</label>
-                <div className="flex flex-col gap-4">
-                  {imagePreview && (
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden border">
-                      <Image
-                        src={imagePreview}
-                        alt="Preview"
-                        fill
-                        className="object-cover"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setImagePreview(null)
-                          setImageFile(null)
-                          if (fileInputRef.current) fileInputRef.current.value = ''
-                        }}
-                        className="absolute top-2 right-2 p-1 bg-red-500 text-white rounded-full hover:bg-red-600"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
-                    </div>
-                  )}
-
-                  <div>
+              {showDoubleOption && (
+                <div className="space-y-3 p-4 rounded-lg border border-input bg-muted/30">
+                  <div className="flex items-center gap-2">
                     <input
-                      ref={fileInputRef}
-                      type="file"
-                      accept="image/*"
-                      onChange={handleImageSelect}
-                      className="hidden"
-                      id="image-upload"
+                      type="checkbox"
+                      id="has_double"
+                      checked={formData.has_double}
+                      onChange={(e) => setFormData({ ...formData, has_double: e.target.checked })}
+                      className="w-4 h-4"
                     />
-                    <label htmlFor="image-upload">
-                      <Button type="button" variant="outline" asChild>
-                        <span className="cursor-pointer">
-                          <Upload className="w-4 h-4 mr-2" />
-                          Resim Seç
-                        </span>
-                      </Button>
+                    <label htmlFor="has_double" className="text-sm font-medium cursor-pointer">
+                      Duble seçeneği ekle
                     </label>
                   </div>
+
+                  {formData.has_double && (
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Duble Fiyatı (TL) *</label>
+                      <input
+                        type="number"
+                        step="0.01"
+                        value={formData.double_price}
+                        onChange={(e) => setFormData({ ...formData, double_price: e.target.value })}
+                        className="w-full md:w-1/3 px-4 py-2 rounded-lg border border-input bg-background"
+                        placeholder="450"
+                        required
+                      />
+                    </div>
+                  )}
                 </div>
-              </div>
+              )}
 
               <div className="flex items-center gap-2">
                 <input
@@ -526,40 +505,30 @@ export default function ProductsPage() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((product) => (
-          <Card key={product.id} className="group overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="relative h-48 bg-muted">
-              {product.image_url ? (
-                <Image
-                  src={product.image_url}
-                  alt={product.name}
-                  fill
-                  className="object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  Resim Yok
-                </div>
-              )}
+          <Card key={product.id} className="group hover:shadow-lg transition-shadow relative">
+            {product.discount_percentage > 0 && (
+              <div className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                <Tag className="w-3 h-3" />
+                %{product.discount_percentage}
+              </div>
+            )}
 
-              {product.discount_percentage > 0 && (
-                <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                  <Tag className="w-3 h-3" />
-                  %{product.discount_percentage}
-                </div>
-              )}
-
-              {!product.is_active && (
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <span className="text-white font-bold">Pasif</span>
-                </div>
-              )}
-            </div>
+            {!product.is_active && (
+              <div className="absolute inset-0 bg-black/50 rounded-xl flex items-center justify-center z-10">
+                <span className="text-white font-bold">Pasif</span>
+              </div>
+            )}
 
             <CardContent className="p-4">
-              <div className="mb-2">
+              <div className="mb-2 flex items-center gap-2 flex-wrap">
                 {product.categories && (
                   <span className="text-xs text-muted-foreground">
                     {product.categories.name}
+                  </span>
+                )}
+                {product.subcategories && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground">
+                    {product.subcategories.name}
                   </span>
                 )}
               </div>
@@ -582,6 +551,11 @@ export default function ProductsPage() {
                       {product.original_price} TL
                     </span>
                   )}
+                  {product.has_double && product.double_price && (
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground">
+                      Duble {product.double_price} TL
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -598,7 +572,7 @@ export default function ProductsPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => handleDelete(product.id, product.image_url)}
+                  onClick={() => handleDelete(product.id)}
                   className="text-red-600 hover:text-red-700"
                 >
                   <Trash2 className="w-4 h-4" />

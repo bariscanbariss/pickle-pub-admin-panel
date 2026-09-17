@@ -12,9 +12,19 @@ export type Category = {
   updated_at: string
 }
 
+export type Subcategory = {
+  id: string
+  category_id: string
+  name: string
+  display_order: number
+  created_at: string
+  updated_at: string
+}
+
 export type Product = {
   id: string
   category_id: string | null
+  subcategory_id: string | null
   name: string
   description: string | null
   price: number
@@ -22,11 +32,14 @@ export type Product = {
   discount_percentage: number
   image_url: string | null
   is_popular: boolean
+  has_double: boolean
+  double_price: number | null
   display_order: number
   is_active: boolean
   created_at: string
   updated_at: string
   categories?: Category | null
+  subcategories?: Subcategory | null
 }
 
 export type PopularItem = {
@@ -122,14 +135,51 @@ export const deleteCategory = async (id: string) => {
   await prisma.categories.delete({ where: { id } })
 }
 
+// Subcategories
+export const getSubcategories = async (categoryId?: string) => {
+  const data = await prisma.subcategories.findMany({
+    where: categoryId ? { category_id: categoryId } : undefined,
+    orderBy: { display_order: 'asc' }
+  })
+  return serialize(data) as Subcategory[]
+}
+
+export const createSubcategory = async (subcategory: Partial<Subcategory>) => {
+  const data = await prisma.subcategories.create({
+    data: {
+      category_id: subcategory.category_id!,
+      name: subcategory.name!,
+      display_order: subcategory.display_order ?? 0,
+    }
+  })
+  return serialize(data) as Subcategory
+}
+
+export const updateSubcategory = async (id: string, subcategory: Partial<Subcategory>) => {
+  const data = await prisma.subcategories.update({
+    where: { id },
+    data: {
+      category_id: subcategory.category_id,
+      name: subcategory.name,
+      display_order: subcategory.display_order,
+      updated_at: new Date()
+    }
+  })
+  return serialize(data) as Subcategory
+}
+
+export const deleteSubcategory = async (id: string) => {
+  await prisma.subcategories.delete({ where: { id } })
+}
+
 // Products
 export const getProducts = async (categoryId?: string) => {
   const data = await prisma.products.findMany({
     where: categoryId ? { category_id: categoryId } : undefined,
     orderBy: { display_order: 'asc' },
-    include: { categories: true }
+    include: { categories: true, subcategories: true }
   })
-  return serialize(data)
+  return serialize(data) as Product[]
 }
 
 export const getActiveProducts = async (categoryId?: string) => {
@@ -139,9 +189,9 @@ export const getActiveProducts = async (categoryId?: string) => {
       ...(categoryId ? { category_id: categoryId } : {})
     },
     orderBy: { display_order: 'asc' },
-    include: { categories: true }
+    include: { categories: true, subcategories: true }
   })
-  return serialize(data)
+  return serialize(data) as Product[]
 }
 
 export const createProduct = async (product: Partial<Product>) => {
@@ -154,9 +204,12 @@ export const createProduct = async (product: Partial<Product>) => {
       discount_percentage: product.discount_percentage ?? 0,
       image_url: product.image_url,
       is_popular: product.is_popular ?? false,
+      has_double: product.has_double ?? false,
+      double_price: product.double_price,
       display_order: product.display_order ?? 0,
       is_active: product.is_active ?? true,
-      category_id: product.category_id
+      category_id: product.category_id,
+      subcategory_id: product.subcategory_id
     }
   })
   return serialize(data) as Product
@@ -173,9 +226,12 @@ export const updateProduct = async (id: string, product: Partial<Product>) => {
       discount_percentage: product.discount_percentage,
       image_url: product.image_url,
       is_popular: product.is_popular,
+      has_double: product.has_double,
+      double_price: product.double_price,
       display_order: product.display_order,
       is_active: product.is_active,
       category_id: product.category_id,
+      subcategory_id: product.subcategory_id,
       updated_at: new Date()
     }
   })
