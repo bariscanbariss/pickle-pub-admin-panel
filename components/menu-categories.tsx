@@ -33,9 +33,18 @@ export function MenuCategories({ categories }: MenuCategoriesProps) {
     })
     .filter(Boolean) as Array<{ src: string; dbId: string; slug: string }>
 
+  // Veritabanında aynı türde birden fazla kategori olabilir (örn. iki "Cocktails" kaydı) —
+  // aynı slug'a eşleşen tekrarları eleyip her kategoriden tek kutucuk gösteriyoruz.
+  const seenSlugs = new Set<string>()
+  const deduped = matched.filter((item) => {
+    if (seenSlugs.has(item.slug)) return false
+    seenSlugs.add(item.slug)
+    return true
+  })
+
   const displayItems =
-    matched.length > 0
-      ? matched
+    deduped.length > 0
+      ? deduped
       : CATEGORY_MAP.map((m) => ({ src: m.src, dbId: m.id, slug: m.id }))
 
   const router = useRouter()
